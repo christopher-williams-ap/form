@@ -1,4 +1,5 @@
 <head>
+  <script type="module" src="https://cdn.trustedform.com/consent.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P05V4ZMDRJ"></script>
   <script>
@@ -20,5 +21,11 @@
     <label for="frmEmailA">Email</label>
     <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
   </fieldset>
-  <button>Sign up</button>
+  <trustedform-consent>
+    <label slot="consent-language">
+      <input type="checkbox" name="trustedform-consent" />
+      This area contains your consent language to which the user must agree.
+    </label>
+    <button slot="submit">Submit</button>
+  </trustedform-consent>
 </form>
