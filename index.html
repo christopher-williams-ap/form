@@ -1,5 +1,5 @@
 <head>
-  <style>
+  <!-- <style>
     input {display: block; margin: 10px 0; min-width: 250px; padding: 6px 0; font-size: 14px;}
   </style>
   <!-- <script src="https://cdn.trustedform.com/consent.js?k=8af571e2117346f7bb2430b8a80e09ab"></script> -->
@@ -16,22 +16,16 @@
 </head>
 <h1>Hello World</h1>
 <form method="post" autocomplete="on" name="strongbad" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit?redir_url=http%3A%2F%2Factiveprospect.com">
-  <fieldset>
-    <legend>Contact Info</legend>
-    <label for="firstName">First Name</label>
-    <input name="first_name" id="firstName" placeholder="First name" required autocomplete="given-name">
-    <label for="lastName">Last Name</label>
-    <input name="last_name" id="lastName" placeholder="Last name" required autocomplete="family-name">
-    <label for="frmEmailA">Email Address</label>
-    <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
-  </fieldset>
-  <trustedform-consent>
-    <button>Submit</button>
-    </br>
-    <label>
-      This area contains your consent language to which the user must agree.
-    </label>
-  </trustedform-consent>
+
+  <label for="firstName">First Name</label></br>
+  <input name="first_name" id="firstName" placeholder="First name" required autocomplete="given-name"></br></br>
+  <label for="lastName">Last Name</label></br>
+  <input name="last_name" id="lastName" placeholder="Last name" required autocomplete="family-name"></br></br>
+  <label for="frmEmailA">Email Address</label></br>
+  <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email"></br></br>
+  <label>This area contains your consent language to which the user must agree.</label></br></br>
+  <button>Submit</button>
+    
 </form>
 <!-- Generate a TrustedForm Certificate -->
 <script type="text/javascript">
