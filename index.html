@@ -1,3 +1,23 @@
+<head>
+  <!-- Generate a TrustedForm Certificate -->
+  <script type="text/javascript">
+  (function() {
+      var field = 'xxTrustedFormCertUrl';
+      var provideReferrer = false;
+      var identifier = 'CHR12T0PH3R'
+      //var sandbox = true;
+      var disableSnapshot = true;
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript'; tf.async = true; 
+      tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+      '://cdn.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&disable_snapshot=' + disableSnapshot;;
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+  )();
+  </script>
+<noscript>
+    <img src="http://api.trustedform.com/ns.gif" />
+</noscript>
+</head>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit?redir_url=http%3A%2F%2Factiveprospect.com">
 
   <label for="firstName">First Name</label></br>
@@ -10,21 +30,4 @@
   <button>Submit</button>
     
 </form>
-<!-- Generate a TrustedForm Certificate -->
-<script type="text/javascript">
-(function() {
-    var field = 'xxTrustedFormCertUrl';
-    var provideReferrer = false;
-    var identifier = 'CHR12T0PH3R'
-    //var sandbox = true;
-    var disableSnapshot = true;
-    var tf = document.createElement('script');
-    tf.type = 'text/javascript'; tf.async = true; 
-    tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-    '://cdn.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&disable_snapshot=' + disableSnapshot;;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-)();
-</script>
-<noscript>
-    <img src="http://api.trustedform.com/ns.gif" />
-</noscript>
+
