@@ -7,11 +7,11 @@
       var identifier = 'CHR12T0PH3R'
       //var sandbox = true;
       //var disableSnapshot = false;
-      var enablePing = false;
+      var pingField = 'pingURL';
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://cdn.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&enable_ping=' + escape(enablePing);
+      '://cdn.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + 'ping_field=' + escape(pingField);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
