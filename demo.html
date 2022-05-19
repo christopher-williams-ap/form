@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en" class="astro-7YCLC5LL"><head>
+		
+<!-- Common -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Demo Flow</title>
+<meta name="description" content="Fill out the form">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+
+<!-- Stylesheets -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+</head>
+	<body>
+    <div class="pt-16 pb-8 text-center astro-7YCLC5LL">
+      <div class="container astro-7YCLC5LL">
+
+        <h3 class="mb-4 font-bold text-4xl text-white astro-7YCLC5LL">
+          Fill out the form below
+        </h3>
+      </div>
+    </div>
+    <main class="demo-flow astro-7YCLC5LL">
+      <div class="pt-4 pb-12 astro-7YCLC5LL">
+        <div class="container flex justify-center items-center astro-7YCLC5LL">
+          <div class="box astro-7YCLC5LL">
+            <div class="mx-auto mb-12 first-line:py-1 rounded-md text-center astro-7YCLC5LL" style="background: #83BD02; width: 45%">
+              <span class="text-white text-lg font-normal astro-7YCLC5LL" id="percentLabel">0% COMPLETE</span>
+            </div>
+
+            <div id="step-1" class="astro-7YCLC5LL">
+              <p class="question astro-7YCLC5LL">
+                Sample Question 1?
+              </p>
+              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
+                Yes
+              </button>
+              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
+                No
+              </button>
+              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
+                Not sure
+              </button>
+            </div>
+
+            <div id="step-2" class="astro-7YCLC5LL">
+              <p class="question astro-7YCLC5LL">
+                What feature are you most interested in?
+              </p>
+              <div class="mx-auto w-64 astro-7YCLC5LL">
+                <select class="select astro-7YCLC5LL">
+                  <option selected="" disabled="" class="astro-7YCLC5LL">Select</option>
+                  <option value="1" class="astro-7YCLC5LL">Fingerprint Match</option>
+                  <option value="2" class="astro-7YCLC5LL">Page Scan</option>
+                  <option value="3" class="astro-7YCLC5LL">Session Replay</option>
+                  <option value="4" class="astro-7YCLC5LL">Event Log</option>
+                  <option value="5" class="astro-7YCLC5LL">All of the above</option>
+                </select>
+              </div>
+
+              <button class="button go-to-step-3 astro-7YCLC5LL" type="button">
+                Confirm
+              </button>
+            </div>
+
+            <div id="step-3" class="astro-7YCLC5LL">
+              <p class="question astro-7YCLC5LL">
+                Lead being submitted
+              </p>
+              <div class="astro-7YCLC5LL">
+
+
+                <form id="form" class="astro-7YCLC5LL">
+                  <div class="mb-4 astro-7YCLC5LL">
+                    <label for="email" class="form-label astro-7YCLC5LL">Your email</label>
+                    <input type="email" id="email" class="form-input astro-7YCLC5LL" placeholder="email@example.com" required="">
+										<div id="email-error" style="display: none" class="astro-7YCLC5LL">
+											<span class="text-red-700 font-medium text-sm astro-7YCLC5LL">
+												This is not a valid email address. Please try again.
+											</span>
+										</div>
+                  </div>
+
+                  <div class="flex items-center mb-6 astro-7YCLC5LL">
+                    <div class="flex items-center h-5 astro-7YCLC5LL">
+                      <input id="agree" type="checkbox" class="w-6 h-6 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-700 astro-7YCLC5LL" required="">
+                    </div>
+                    <div class="ml-3 text-sm astro-7YCLC5LL">
+                      <label for="agree" class="font-medium text-gray-700 text-sm astro-7YCLC5LL">
+                        I consent to this demo and understand that my data will only be used as an example and not in any meaningful way.
+                      </label>
+                    </div>
+                  </div>
+
+                  <button class="button astro-7YCLC5LL" type="submit">
+                    SUBMIT
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div id="step-4" class="astro-7YCLC5LL">
+              <p class="question text-center astro-7YCLC5LL">
+                Thanks!
+              </p>
+              <p class="text-center text-xl font-medium astro-7YCLC5LL">
+                Demo complete
+              </p>
+              <p class="text-center text-xl font-medium mt-6 astro-7YCLC5LL">
+                You can go back to work now.
+              </p>
+              <p class="text-center text-xl font-medium mt-6 astro-7YCLC5LL">
+                Bye
+              </p>
+            </div>
+            <div id="loading" class="flex items-center justify-center py-4 astro-7YCLC5LL">
+              <div class="lds-ring astro-7YCLC5LL"><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="bg-gray-900 astro-7YCLC5LL">
+      <div class="container astro-7YCLC5LL">
+        <div class="py-12 astro-7YCLC5LL">
+          <p class="text-gray-300 astro-7YCLC5LL">This website is for demo purposes only.</p>
+        </div>
+      </div>
+    </div>
+  <script>
+    window.onload = () => {
+
+        const step1buttons = document.querySelectorAll('.go-to-step-2');
+        const step2button = document.querySelector('.go-to-step-3');
+
+        const percentLabel = document.getElementById('percentLabel');
+
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const step3 = document.getElementById('step-3');
+        const step4 = document.getElementById('step-4');
+        const loading = document.getElementById('loading');
+        const emailError = document.getElementById('email-error');
+
+        const form = document.getElementById('form')
+
+        step1buttons.forEach(el => el.addEventListener('click', event => {
+          step1.style.display = "none"
+          step2.style.display = "block"
+          percentLabel.innerHTML = "33% COMPLETE"
+        }));
+
+        step2button.addEventListener('click', event => {
+          step2.style.display = "none"
+          step3.style.display = "block"
+          percentLabel.innerHTML = "66% COMPLETE"
+        })
+    }
+  </script>
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript'; tf.async = true;
+      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') + "://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&l=" + new Date().getTime() + Math.random();
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src="https://api.trustedform.com/ns.gif" />
+  </noscript>
+  <!-- End TrustedForm -->
+
+
+</body></html>
