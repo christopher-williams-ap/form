@@ -18,8 +18,33 @@
   <noscript>
       <img src="http://api.trustedform.com/ns.gif" />
   </noscript>
-  <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+  <link rel="shortcut icon" type="image/jpg" href="form/favicon.ico"/>
+  <link rel='icon' href='form/favicon.ico' type='image/x-icon'>
+  <link rel="stylesheet" href="https://use.typekit.net/znf0juo.css">
+  <style>
+    body {background-color: #253842; font-family: "proxima nova", sans-serif; color: #6fb3c1; width: 500px; margin: 0 auto; padding: 20px; font-size: 18px;}
+    input {background-color: #6fb3c1!important; display: block; margin: 10px 0; min-width: 250px; padding: 6px 0; font-size: 14px;}
+    input[type="text"], input[type="password"], input[type="email"], textarea {color: #fff;}
+    #submit_staging_form {background-color: #F37021; -webkit-border-radius: 4px; border: none; color: #fff; font-size: 14px;}
+    #toggle {background-color: #ddd; -webkit-border-radius: 4px; border: none; color: #aaa; font-size: 14px;}
+    #toggle.stop {background-color: #FF4136; color: hsla(3, 100%, 25%, 1.0); }
+    #toggle.start {background-color: #2ECC40; color: hsla(127, 63%, 15%, 1.0); }
+    a {color:#fff;}
+  </style>
 </head>
+<div id="demo-form">
+  <h1 style="color: #fff">TrustedForm Demo</h1>
+  <form method="post" id="staging_form" name="staging_form" action="https://next.leadconduit-staging.com/flows/5d47e3ab1ad7e8acc11f91bb/sources/53a310fa9d29c9c72100006c/submit?redir_url=http%3A%2F%2Factiveprospect.com">
+    <input type="text"    id="first_name" name="first_name" placeholder="First Name">
+    <input type="text"    id="last_name"  name="last_name"  placeholder="Last Name">
+    <input type="text"    id="email"      name="email"      placeholder="Email Address">
+    <input type="text"    id="phone"      name="phone"      placeholder="Phone Number">
+    <input type="checkbox" name="consent_given">
+    <label for="consent_given">I confirm that all of my information is accurate and consent to be called as provided above.</label>
+    <button type="submit" id="submit"     name="submit">Submit</button>
+  </form>
+</div>
+<!--
 <h1>TF Staging Script</h1>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
 
@@ -36,3 +61,4 @@
   <button>Submit</button>
     
 </form>
+-->
