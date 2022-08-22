@@ -11,7 +11,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://cdn.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&sandbox=' + escape(sandbox);
+      '://api.staging.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&sandbox=' + escape(sandbox);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
