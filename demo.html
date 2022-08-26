@@ -1,179 +1,578 @@
-<!DOCTYPE html><html lang="en" class="astro-7YCLC5LL"><head>
-		
-<!-- Common -->
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width">
+<meta name="facebook-domain-verification" content="a4egwwbzwk9xrdc35tkiidi0535oeg" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://activeprospect.com/xmlrpc.php">
+<!--<link rel="shortcut icon" href="--><!--">-->
 
-<title>Demo Flow</title>
-<meta name="description" content="Fill out the form">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<!--<script src='https://www.google.com/recaptcha/api.js' async defer></script>-->
 
-
-<!-- Stylesheets -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
-
-</head>
-	<body>
-    <div class="pt-16 pb-8 text-center astro-7YCLC5LL">
-      <div class="container astro-7YCLC5LL">
-
-        <h3 class="mb-4 font-bold text-4xl text-white astro-7YCLC5LL">
-          Fill out the form below
-        </h3>
-      </div>
-    </div>
-    <main class="demo-flow astro-7YCLC5LL">
-      <div class="pt-4 pb-12 astro-7YCLC5LL">
-        <div class="container flex justify-center items-center astro-7YCLC5LL">
-          <div class="box astro-7YCLC5LL">
-            <div class="mx-auto mb-12 first-line:py-1 rounded-md text-center astro-7YCLC5LL" style="background: #83BD02; width: 45%">
-              <span class="text-white text-lg font-normal astro-7YCLC5LL" id="percentLabel">0% COMPLETE</span>
-            </div>
-
-            <div id="step-1" class="astro-7YCLC5LL">
-              <p class="question astro-7YCLC5LL">
-                Sample Question 1?
-              </p>
-              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
-                Yes
-              </button>
-              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
-                No
-              </button>
-              <button class="button go-to-step-2 astro-7YCLC5LL" type="button">
-                Not sure
-              </button>
-            </div>
-
-            <div id="step-2" class="astro-7YCLC5LL">
-              <p class="question astro-7YCLC5LL">
-                What feature are you most interested in?
-              </p>
-              <div class="mx-auto w-64 astro-7YCLC5LL">
-                <select class="select astro-7YCLC5LL">
-                  <option selected="" disabled="" class="astro-7YCLC5LL">Select</option>
-                  <option value="1" class="astro-7YCLC5LL">Fingerprint Match</option>
-                  <option value="2" class="astro-7YCLC5LL">Page Scan</option>
-                  <option value="3" class="astro-7YCLC5LL">Session Replay</option>
-                  <option value="4" class="astro-7YCLC5LL">Event Log</option>
-                  <option value="5" class="astro-7YCLC5LL">All of the above</option>
-                </select>
-              </div>
-
-              <button class="button go-to-step-3 astro-7YCLC5LL" type="button">
-                Confirm
-              </button>
-            </div>
-
-            <div id="step-3" class="astro-7YCLC5LL">
-              <p class="question astro-7YCLC5LL">
-                Lead being submitted
-              </p>
-              <div class="astro-7YCLC5LL">
-
-
-                <form id="form" class="astro-7YCLC5LL">
-                  <div class="mb-4 astro-7YCLC5LL">
-                    <label for="email" class="form-label astro-7YCLC5LL">Your email</label>
-                    <input type="email" id="email" class="form-input astro-7YCLC5LL" placeholder="email@example.com" required="">
-										<div id="email-error" style="display: none" class="astro-7YCLC5LL">
-											<span class="text-red-700 font-medium text-sm astro-7YCLC5LL">
-												This is not a valid email address. Please try again.
-											</span>
-										</div>
-                  </div>
-
-                  <div class="flex items-center mb-6 astro-7YCLC5LL">
-                    <div class="flex items-center h-5 astro-7YCLC5LL">
-                      <input id="agree" type="checkbox" class="w-6 h-6 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-700 astro-7YCLC5LL" required="">
-                    </div>
-                    <div class="ml-3 text-sm astro-7YCLC5LL">
-                      <label for="agree" class="font-medium text-gray-700 text-sm astro-7YCLC5LL">
-                        I consent to this demo and understand that my data will only be used as an example and not in any meaningful way.
-                      </label>
-                    </div>
-                  </div>
-
-                  <button class="button astro-7YCLC5LL" type="submit">
-                    SUBMIT
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <div id="step-4" class="astro-7YCLC5LL">
-              <p class="question text-center astro-7YCLC5LL">
-                Thanks!
-              </p>
-              <p class="text-center text-xl font-medium astro-7YCLC5LL">
-                Demo complete
-              </p>
-              <p class="text-center text-xl font-medium mt-6 astro-7YCLC5LL">
-                You can go back to work now.
-              </p>
-              <p class="text-center text-xl font-medium mt-6 astro-7YCLC5LL">
-                Bye
-              </p>
-            </div>
-            <div id="loading" class="flex items-center justify-center py-4 astro-7YCLC5LL">
-              <div class="lds-ring astro-7YCLC5LL"><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div><div class="astro-7YCLC5LL"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div class="bg-gray-900 astro-7YCLC5LL">
-      <div class="container astro-7YCLC5LL">
-        <div class="py-12 astro-7YCLC5LL">
-          <p class="text-gray-300 astro-7YCLC5LL">This website is for demo purposes only.</p>
-        </div>
-      </div>
-    </div>
-  <script>
-    window.onload = () => {
-
-        const step1buttons = document.querySelectorAll('.go-to-step-2');
-        const step2button = document.querySelector('.go-to-step-3');
-
-        const percentLabel = document.getElementById('percentLabel');
-
-        const step1 = document.getElementById('step-1');
-        const step2 = document.getElementById('step-2');
-        const step3 = document.getElementById('step-3');
-        const step4 = document.getElementById('step-4');
-        const loading = document.getElementById('loading');
-        const emailError = document.getElementById('email-error');
-
-        const form = document.getElementById('form')
-
-        step1buttons.forEach(el => el.addEventListener('click', event => {
-          step1.style.display = "none"
-          step2.style.display = "block"
-          percentLabel.innerHTML = "33% COMPLETE"
-        }));
-
-        step2button.addEventListener('click', event => {
-          step2.style.display = "none"
-          step3.style.display = "block"
-          percentLabel.innerHTML = "66% COMPLETE"
-        })
-    }
-  </script>
-  <!-- TrustedForm -->
-  <script type="text/javascript">
+<script type="text/javascript">
     (function() {
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript'; tf.async = true;
-      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') + "://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&l=" + new Date().getTime() + Math.random();
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
-    })();
-  </script>
-  <noscript>
-    <img src="https://api.trustedform.com/ns.gif" />
-  </noscript>
-  <!-- End TrustedForm -->
+            var field = 'xxTrustedFormCertUrl';
+            var provideReferrer = false;
+            var tf = document.createElement('script');
+
+            tf.type = 'text/javascript'; tf.async = true;
+            tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+                '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random();
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+    )();
+</script>
+<noscript>
+    <img src="http://api.trustedform.com/ns.gif" />
+</noscript>
+
+<!-- Anti-flicker snippet (recommended)  -->
+<!--<style>.async-hide { opacity: 0 !important} </style>-->
+<!--<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;-->
+<!--h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};-->
+<!--(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;-->
+<!--})(window,document.documentElement,'async-hide','dataLayer',4000,-->
+<!--{'GTM-PPLHNZ':true});</script>-->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PPLHNZ');</script>
+
+<!--  Osana Script  -->
+<script src="https://cmp.osano.com/6oZkySU6ZD0N11Ee/6a5317c0-579e-43e8-897f-a15ee403decb/osano.js"></script>
+<style>
+    .osano-cm-widget{display: none;}
+</style>
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>TrustedForm Demo - ActiveProspect</title>
+	<link rel="canonical" href="https://activeprospect.com/products/trustedform-demo/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="TrustedForm Demo - ActiveProspect" />
+	<meta property="og:url" content="https://activeprospect.com/products/trustedform-demo/" />
+	<meta property="og:site_name" content="ActiveProspect" />
+	<meta property="article:publisher" content="https://www.facebook.com/activeprospect/" />
+	<meta property="article:modified_time" content="2017-06-30T19:40:08+00:00" />
+	<meta name="author" content="Dylan" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@activeprospect" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://activeprospect.com/#website","url":"https://activeprospect.com/","name":"ActiveProspect","description":"The Most Advanced Lead Acquisition Platform |","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://activeprospect.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://activeprospect.com/products/trustedform-demo/#webpage","url":"https://activeprospect.com/products/trustedform-demo/","name":"TrustedForm Demo - ActiveProspect","isPartOf":{"@id":"https://activeprospect.com/#website"},"datePublished":"2017-02-01T17:31:24+00:00","dateModified":"2017-06-30T19:40:08+00:00","breadcrumb":{"@id":"https://activeprospect.com/products/trustedform-demo/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://activeprospect.com/products/trustedform-demo/"]}]},{"@type":"BreadcrumbList","@id":"https://activeprospect.com/products/trustedform-demo/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://activeprospect.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://activeprospect.com/products/"},{"@type":"ListItem","position":3,"name":"TrustedForm Demo"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
 
 
-</body></html>
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//p.typekit.net' />
+<link rel='dns-prefetch' href='//static.zdassets.com' />
+<link rel='dns-prefetch' href='//api.trustedform.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//www.gstatic.com' />
+<link rel="alternate" type="application/rss+xml" title="ActiveProspect &raquo; Feed" href="https://activeprospect.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ActiveProspect &raquo; Comments Feed" href="https://activeprospect.com/comments/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://activeprospect.com/wp-includes/css/dist/block-library/style.min.css?ver=5.9.3' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='ap-typekit-css'  href='https://use.typekit.net/elo4luc.css?ver=4.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='activeprospect-style-css'  href='https://activeprospect.com/wp-content/themes/activeprospect/assets/css/activeprospect.min.css?ver=4.2.8' type='text/css' media='all' />
+<script type='text/javascript' async src='https://kit.fontawesome.com/bacf197dfd.js?ver=5.9.3' id='ap-fontawesome5-js'></script>
+<link rel="https://api.w.org/" href="https://activeprospect.com/wp-json/" /><link rel="alternate" type="application/json" href="https://activeprospect.com/wp-json/wp/v2/pages/53" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://activeprospect.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://activeprospect.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://activeprospect.com/?p=53' />
+<link rel="alternate" type="application/json+oembed" href="https://activeprospect.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Factiveprospect.com%2Fproducts%2Ftrustedform-demo%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://activeprospect.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Factiveprospect.com%2Fproducts%2Ftrustedform-demo%2F&#038;format=xml" />
+<link rel="icon" href="https://activeprospect.com/wp-content/uploads/2020/12/ap_favicon.png" sizes="32x32" />
+<link rel="icon" href="https://activeprospect.com/wp-content/uploads/2020/12/ap_favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://activeprospect.com/wp-content/uploads/2020/12/ap_favicon.png" />
+<meta name="msapplication-TileImage" content="https://activeprospect.com/wp-content/uploads/2020/12/ap_favicon.png" />
+		<style type="text/css" id="wp-custom-css">
+			@media only screen and (min-width: 48em) {
+	.b-faq-section__item {
+		width: 48%;
+	}
+	
+	.b-faq_section__items {
+		justify-content: space-between;
+	}
+}
+.osano-cm-widget { display: none; }
+
+.page-id-4672 #menu-main-navigation {
+display: none;
+}
+
+.page-id-4683 #menu-main-navigation {
+display: none;
+}
+
+
+.page-id-4685 #menu-main-navigation {
+display: none;
+}
+
+.page-id-4696 #menu-main-navigation {
+display: none;
+}		</style>
+		</head>
+
+<body class="page-template page-template-template-products-trustedform-demo page-template-template-products-trustedform-demo-php page page-id-53 page-parent page-child parent-pageid-30">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PPLHNZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<div id="wrapper" class="b-site-wrapper">
+	<a
+		class="skip-link screen-reader-text"
+		href="#content"
+	>
+		Skip to content	</a>
+
+	
+<div class="b-header__spacer">
+</div>
+
+
+<header class="b-header" id="js-site-header--sticky-nav" role="banner">
+
+	<div class="b-header__wrapper">
+		<div class="b-header__upper">
+			<a
+				href="https://activeprospect.com"
+				rel="home"
+				itemprop="url"
+				class="b-header__logo__link"
+			>
+				<img
+					class="b-header__logo__image"
+					src="https://activeprospect.com/wp-content/themes/activeprospect/assets/images/APLogo_Final2020_cropped.png"
+					alt="ActiveProspect"
+					width="267"
+				/>
+			</a>
+
+			<button
+				class="b-header__toggle"
+				id="js-menu-toggle"
+				aria-controls="menu"
+				aria-expanded="false"
+			>
+                <i class="fas fa-bars"></i>
+				<span class="screen-reader-text">Menu</span>
+			</button>
+
+			<nav
+				class="b-top-navigation"
+				role="navigation"
+			>
+				<ul id="js-top-menu" class="b-top-menu"><li class="b-top-menu__item b-top-menu__item--login"><a href="https://sso.activeprospect.com/login">Log In</a></li>
+</ul>			</nav><!-- .b-top-navigation -->
+		</div><!-- .b-header__upper -->
+
+		<div class="b-header__lower">
+            <div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="menu"><li id="menu-item-4381" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4381"><a href="#">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-4382" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4382"><a href="https://activeprospect.com/products/leadconduit/">LeadConduit</a></li>
+	<li id="menu-item-4383" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4383"><a href="https://activeprospect.com/products/trustedform/">TrustedForm</a></li>
+	<li id="menu-item-4703" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4703"><a target="_blank" rel="noopener" href="https://leadsbridge.com/">LeadsBridge</a></li>
+</ul>
+</li>
+<li id="menu-item-3854" class="b-header-main-menu__item menu-item menu-item-type-custom menu-item-object-custom menu-item-3854"><a href="/integrations/">Integrations</a></li>
+<li id="menu-item-3855" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3855"><a href="#">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-3856" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3856"><a href="https://activeprospect.com/compliance/">Compliance</a></li>
+	<li id="menu-item-3858" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3858"><a href="https://activeprospect.com/lead-acquisition/">Lead Acquisition</a></li>
+	<li id="menu-item-3857" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3857"><a href="https://activeprospect.com/lead-optimization/">Lead Optimization</a></li>
+	<li id="menu-item-3859" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3859"><a href="https://activeprospect.com/lead-distribution/">Lead Distribution</a></li>
+</ul>
+</li>
+<li id="menu-item-3860" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3860"><a href="#">Industry</a>
+<ul class="sub-menu">
+	<li id="menu-item-3861" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3861"><a href="https://activeprospect.com/insurance/">Insurance</a></li>
+	<li id="menu-item-3862" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3862"><a href="https://activeprospect.com/financial-services/">Financial Services</a></li>
+	<li id="menu-item-3865" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3865"><a href="https://activeprospect.com/home-services/">Home Services</a></li>
+	<li id="menu-item-3863" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3863"><a href="https://activeprospect.com/education/">Education</a></li>
+	<li id="menu-item-3864" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3864"><a href="https://activeprospect.com/direct-to-consumer/">CPG &#038; Media</a></li>
+</ul>
+</li>
+<li id="menu-item-4569" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4569"><a href="#">Content</a>
+<ul class="sub-menu">
+	<li id="menu-item-4260" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4260"><a href="https://activeprospect.com/resources/">Content Library</a></li>
+	<li id="menu-item-4584" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4584"><a href="https://activeprospect.com/webinars/">Webinars</a></li>
+	<li id="menu-item-4570" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4570"><a href="https://activeprospect.com/whitepaper/">Whitepapers</a></li>
+	<li id="menu-item-3874" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-3874"><a href="/blog/">Blog</a></li>
+	<li id="menu-item-4571" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4571"><a href="https://activeprospect.com/case-studies/">Case Studies</a></li>
+	<li id="menu-item-4106" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4106"><a href="https://activeprospect.com/roi-calculator/">ROI Calculator</a></li>
+	<li id="menu-item-4572" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4572"><a href="https://activeprospect.com/videos/">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-3866" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3866"><a href="#">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-3867" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3867"><a href="https://activeprospect.com/about-us/">About Us</a></li>
+	<li id="menu-item-3868" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3868"><a href="https://activeprospect.com/activeprospect-events/">Events</a></li>
+	<li id="menu-item-4654" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4654"><a href="https://activeprospect.com/careers/">Careers</a></li>
+	<li id="menu-item-3869" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3869"><a href="https://activeprospect.com/benefits/">Benefits</a></li>
+	<li id="menu-item-3872" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-3872"><a href="https://community.activeprospect.com/">Support</a></li>
+</ul>
+</li>
+<li id="menu-item-3873" class="b-header-main-menu__item menu-item menu-item-type-custom menu-item-object-custom menu-item-3873"><a href="https://sso.activeprospect.com/trustedform/script">TrustedForm Web Script</a></li>
+</ul></div>			
+<div class="b-header-contact">
+	<div class="b-header-contact__cta--wrapper">
+        <li class="b-top-menu__item b-top-menu__item--hide-mobile">
+            <a href="tel:5123944546">1-512-394-4546</a>
+        </li>
+		<a
+			class="b-header-contact__button b-header-contact__button--expert"
+			href="https://activeprospect.com/demo-page/"
+		>
+                            SCHEDULE DEMO            		</a>
+	</div>
+
+</div>
+
+			<ul id="menu-header-mobile-extra-menu-items" class="b-header-mobile-extra-menu"><li class="b-header-mobile-extra-menu__item"><a href="https://activeprospect.com/privacy-policy/">Privacy Policy</a></li>
+<li class="b-header-mobile-extra-menu__item"><a href="https://activeprospect.com/terms-of-service/">Terms of Service</a></li>
+</ul>
+			<ul id="menu-social" class="b-header-social-menu"><li class="b-header-social-menu__item"><a target="_blank" href="https://www.facebook.com/activeprospect/"><span class="screen-reader-text">Facebook</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-facebook" aria-label="social-facebook"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-facebook"/></svg></a></li>
+<li class="b-header-social-menu__item"><a target="_blank" href="https://twitter.com/activeprospect"><span class="screen-reader-text">Twitter</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-twitter" aria-label="social-twitter"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-twitter"/></svg></a></li>
+<li class="b-header-social-menu__item"><a target="_blank" href="https://www.instagram.com/activeprospect/"><span class="screen-reader-text">Instagram</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-instagram" aria-label="social-instagram"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-instagram"/></svg></a></li>
+<li class="b-header-social-menu__item"><a target="_blank" href="https://www.linkedin.com/company/activeprospect"><span class="screen-reader-text">LinkedIn</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-linkedin" aria-label="social-linkedin"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-linkedin"/></svg></a></li>
+</ul>		</div><!-- .b-header__lower -->
+
+	</div><!-- .b-header__wrapper -->
+</header><!-- .b-header -->
+
+	<div id="content" class="b-page-content">
+
+<header class="b-page-header b-page-header--trustedform-demo">
+	<h1 class="b-page-header__title">
+		See How TrustedForm Works!
+	</h1>
+
+	<h2 class="b-page-header__subtitle">
+		Fill out the form below and we’ll email you the TrustedForm certificate associated with your sign up.
+	</h2>
+</header>
+
+<div id="primary" class="b-content-area b-content-area--narrow" role="main">
+
+	<div class="b-trustedform-demo-form">
+
+		<div class="b-trustedform-demo-form__image-container">
+			<img
+				src="https://live.staticflickr.com/7378/11288530833_7e265b0094_m.jpg"
+				alt="Random image to demo the TrustedForm video"
+				class="b-trustedform-demo-form__image"
+			/>
+			<span class="b-trustedform-demo-form__image-caption">
+				Random pic for your visit on: <br><strong>August 26, 2022</strong>
+			</span>
+		</div>
+
+		<form
+			class="b-trustedform-demo-form__form js-contact-form"
+			action="https://app.leadconduit.com/flows/57926249e33d402d40753338/sources/5792610dcc94fb190bd59bc3/submit"
+			method="post"
+			data-redirect="https://activeprospect.com/products/trustedform-demo/thanks/"
+		>
+
+            <div class="b-contact-page__error"></div>
+
+            <label
+                    class="b-trustedform-demo-form__label"
+            >
+                <span class="screen-reader-text">Email</span>
+                <input
+                        type="email"
+                        name="email"
+                        class="b-trustedform-demo-form__field"
+                        placeholder="Email"
+                        required
+                />
+            </label>
+
+			<label
+				class="b-trustedform-demo-form__label"
+			>
+				<span class="screen-reader-text">First Name</span>
+				<input
+					type="text"
+					name="first_name"
+					class="b-trustedform-demo-form__field"
+					placeholder="First Name"
+					required
+				/>
+			</label>
+
+            <label
+                    class="b-trustedform-demo-form__label"
+            >
+                <span class="screen-reader-text">Last Name</span>
+                <input
+                        type="text"
+                        name="last_name"
+                        class="b-trustedform-demo-form__field"
+                        placeholder="Last Name"
+                        required
+                />
+            </label>
+
+            <label
+                    class="b-trustedform-demo-form__label"
+            >
+                <span class="screen-reader-text">Phone</span>
+                <input
+                        type="tel"
+                        name="phone_1"
+                        class="b-trustedform-demo-form__field"
+                        placeholder="Phone"
+                        required
+                />
+            </label>
+
+            <label
+                    class="b-trustedform-demo-form__label"
+            >
+                <span class="screen-reader-text">Company</span>
+                <input
+                        type="text"
+                        name="company_apros"
+                        class="b-trustedform-demo-form__field"
+                        placeholder="Company"
+                        required
+                />
+            </label>
+
+			<label class="b-trustedform-demo-form__label b-trustedform-demo-form__label--agree">
+				<input
+					type="checkbox"
+					class="b-trustedform-demo-form__checkbox"
+					required
+				/>
+				<span class="b-trustedform-demo-form__label-text">
+					I understand that the TrustedForm certificate is sent to the email address I provided above and I will receive product updates as they are released. I can unsubscribe from product updates at any time.
+				</span>
+			</label>
+
+			<input
+				type="submit"
+				class="b-trustedform-demo-form__submit js-submit"
+				value="Submit"
+			/>
+
+            <input type="hidden" name="utm_campaign" value />
+            <input type="hidden" name="utm_source" value />
+            <input type="hidden" name="utm_medium" value />
+
+		</form>
+
+		<a
+			href="https://activeprospect.com/privacy-policy/"
+			class="b-trustedform-demo-form__privacy-link"
+		>
+			Privacy
+		</a>
+	</div>
+
+</div><!-- .b-content-area -->
+
+
+	</div><!-- .b-page-content -->
+
+	<footer class="b-site-footer" role="contentinfo">
+		<div class="b-site-footer__container">
+
+			
+<nav class="b-footer-navigation" role="navigation">
+
+	<div class="b-footer-navigation__column b-footer-navigation__column--main">
+		<div class="b-footer-navigation__item b-footer-navigation__item--social">
+			<a class="b-footer-navigation__item__logo" href="https://activeprospect.com">
+				<img src="https://activeprospect.com/wp-content/themes/activeprospect/assets/images/APIcon_Final_cropped.svg">
+			</a>
+		</div>
+
+                    <div id="block-2" class="contact-info widget_block"><p><em><strong>ActiveProspect HQ</strong></em><br>
+4009 Marathon Blvd<br>
+Austin, TX 78756</p></div><div id="block-3" class="contact-info widget_block"><p><strong>Mailing Address</strong><br>
+P.O Box 151136<br>
+Austin, TX 78715</p></div>        
+        <a
+            class="b-footer-navigation__item__talk"
+            href="https://activeprospect.com/contact-us/"
+        >
+            Contact Sales
+        </a>
+	</div><!-- .b-footer-navigation__column -->
+
+	<div class="b-footer-navigation__column b-footer-navigation__column--integrations">
+		<div class="b-footer-navigation__item">
+			<h4 class="b-footer-navigation__item__title">
+				Integrations			</h4>
+			<ul id="menu-footer-integrations" class="b-footer-menu b-footer-menu--integrations"><li class="b-footer-menu__item"><a href="https://activeprospect.com/integrations/">Integrations</a></li>
+</ul>		</div>
+	</div><!-- .b-footer-navigation__column -->
+
+	<div class="b-footer-navigation__column b-footer-navigation__column--solutions">
+		<div class="b-footer-navigation__item">
+			<h4 class="b-footer-navigation__item__title">
+				Solutions			</h4>
+			<ul id="menu-footer-solutions" class="b-footer-menu b-footer-menu--solutions"><li class="b-footer-menu__item"><a href="https://activeprospect.com/compliance/">Compliance</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-optimization/">Lead Optimization</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-acquisition/">Lead Acquisition</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-distribution/">Lead Distribution</a></li>
+</ul>		</div>
+	</div><!-- .b-footer-navigation__column -->
+
+	<div class="b-footer-navigation__column b-footer-navigation__column--industry">
+		<div class="b-footer-navigation__item">
+			<h4 class="b-footer-navigation__item__title">
+				Industry			</h4>
+			<ul id="menu-footer-industry" class="b-footer-menu b-footer-menu--industry"><li class="b-footer-menu__item"><a href="https://activeprospect.com/insurance/">Insurance</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/financial-services/">Financial Services</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/home-services/">Home Services</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/education/">Education</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/direct-to-consumer/">Direct-to-Consumer</a></li>
+</ul>		</div>
+	</div><!-- .b-footer-navigation__column -->
+
+    <div class="b-footer-navigation__column b-footer-navigation__column--resources">
+        <div class="b-footer-navigation__item">
+            <h4 class="b-footer-navigation__item__title">
+                Resources            </h4>
+            <ul id="menu-footer-resources" class="b-footer-menu b-footer-menu--resources"><li class="b-footer-menu__item"><a href="https://community.activeprospect.com/">Knowledge Base</a></li>
+<li class="b-footer-menu__item"><a href="https://sso.activeprospect.com/trustedform/script">TrustedForm Web Script</a></li>
+<li class="b-footer-menu__item"><a href="https://developers.activeprospect.com/">API Documentation</a></li>
+<li class="b-footer-menu__item"><a href="/blog/">Blog</a></li>
+<li class="b-footer-menu__item"><a href="https://status.activeprospect.com">Status</a></li>
+</ul>        </div>
+    </div><!-- .b-footer-navigation__column -->
+
+	<div class="b-footer-navigation__column b-footer-navigation__column--company">
+		<div class="b-footer-navigation__item">
+			<h4 class="b-footer-navigation__item__title">
+				Company			</h4>
+			<ul id="menu-footer-company" class="b-footer-menu b-footer-menu--company"><li class="b-footer-menu__item"><a href="https://activeprospect.com/about-us/">About Us</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/activeprospect-events/">ActiveProspect Conferences and Events</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/careers/">Careers</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/benefits/">Benefits</a></li>
+</ul>		</div>
+	</div><!-- .b-footer-navigation__column -->
+
+    <div class="b-footer-navigation__column b-footer-navigation__column--legal">
+        <div class="b-footer-navigation__item">
+            <h4 class="b-footer-navigation__item__title">
+                Legal            </h4>
+            <ul id="menu-footer-legal" class="b-footer-menu b-footer-menu--legal"><li class="b-footer-menu__item"><a href="https://activeprospect.com/privacy-policy/">Privacy Policy</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/privacy-notice-california/">Privacy Notice for California Residents</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/terms-of-service/">Terms of Service</a></li>
+<li class="b-footer-menu__item"><a href="https://activeprospect.com/trustedform-eula/">TrustedForm Script EULA</a></li>
+<li class="b-footer-menu__item"><a href="#" onclick="Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')">Cookie Preferences</a></li>
+</ul>        </div>
+    </div><!-- .b-footer-navigation__column -->
+
+    <div class="b-footer-navigation__item__copyright">
+        <ul id="menu-social-1" class="b-footer-menu b-footer-menu--social"><li class="b-footer-menu__item"><a target="_blank" href="https://www.facebook.com/activeprospect/"><span class="screen-reader-text">Facebook</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-facebook" aria-label="social-facebook"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-facebook"/></svg></a></li>
+<li class="b-footer-menu__item"><a target="_blank" href="https://twitter.com/activeprospect"><span class="screen-reader-text">Twitter</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-twitter" aria-label="social-twitter"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-twitter"/></svg></a></li>
+<li class="b-footer-menu__item"><a target="_blank" href="https://www.instagram.com/activeprospect/"><span class="screen-reader-text">Instagram</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-instagram" aria-label="social-instagram"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-instagram"/></svg></a></li>
+<li class="b-footer-menu__item"><a target="_blank" href="https://www.linkedin.com/company/activeprospect"><span class="screen-reader-text">LinkedIn</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-linkedin" aria-label="social-linkedin"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-linkedin"/></svg></a></li>
+</ul>        <p>&copy;2022 ActiveProspect</p>
+    </div>
+
+</nav><!-- .b-footer-navigation -->
+		</div><!-- .b-site-footer__container -->
+	</footer><!-- .b-site-footer -->
+</div><!-- .b-site-wrapper -->
+
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=5abdd806-ee40-4ae6-9b8f-bb3378f88589"> </script><script type='text/javascript' src='https://activeprospect.com/wp-includes/js/jquery/jquery.js?ver=4.2.8' id='jquery-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/plugins/ap-glossary-loader/includes/js/glossary-load.js' id='glossary-load-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/plugins/ap-integrations-directory//includes/js/ap-integrations-search-filter.js' id='ap-integrations-search-filter-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/plugins/ap-integrations-directory//includes/js/ap-integrations-tables.js' id='ap-integrations-tables-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/plugins/ap-integrations-directory//includes/js/ap-integrations-tabs.js' id='ap-integrations-tabs-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/plugins/ap-integrations-directory//includes/js/ap-integrations-elements.js' id='ap-integrations-elements-js'></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/integrations\/|\/integrations\/|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/activeprospect.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/vendor/wpapi/wpapi.min.js?ver=4.2.8' id='node-wpapi-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-includes/js/underscore.min.js?ver=1.13.1' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://activeprospect.com/wp-includes/js/wp-util.min.js?ver=5.9.3' id='wp-util-js'></script>
+<script type='text/javascript' id='activeprospect-js-js-extra'>
+/* <![CDATA[ */
+var activeProspect = {"endpoint":"https:\/\/activeprospect.com\/wp-json\/","postsPerPage":"5","siteUrl":"https:\/\/activeprospect.com"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/activeprospect.min.js?ver=4.2.8' id='activeprospect-js-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/sticky-navigation.js?ver=4.2.8' id='activeprospect-sticky-navigation-js'></script>
+<script type='text/javascript' src='//cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js?ver=2.2' id='js-cookies-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/utm-tracking.js?ver=4.2.8' id='activeprospect-utm-tracking-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/activeprospect-gated-popup-form.js?ver=4.2.8' id='activeprospect-gated-popup-form-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/activeprospect-fill-form-fields-button.js?ver=4.2.8' id='activeprospect-fill-fields-button-js'></script>
+<script type='text/javascript' src='https://activeprospect.com/wp-content/themes/activeprospect/assets/js/activeprospect-resource-library.js?ver=4.2.8' id='activeprospect-resource-library-js'></script>
+
+<script type="text/javascript">
+	_linkedin_data_partner_id = "86748";
+	</script><script type="text/javascript">
+	(function(){var s = document.getElementsByTagName("script")[0];
+	var b = document.createElement("script");
+	b.type = "text/javascript";b.async = true;
+	b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+	s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=86748&fmt=gif" />
+</noscript>
+
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '271098606716933');
+	fbq('track', 'PageView');
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=271098606716933&ev=PageView&noscript=1" />
+</noscript>
+
+</body>
+</html>
