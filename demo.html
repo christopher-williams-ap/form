@@ -28,7 +28,7 @@
 <script type="text/javascript">
     // callback to log certificate url to console
     function trustedFormCertUrlCallback(certificateUrl) {
-	document.getElementById('demo').setAttribute('action','https://app.leadconduit.com/flows/630826e984b3f41a172504c0/sources/61b26824e5499ecd6bbf2967/submit' + certificateUrl)
+	document.getElementById('demo').setAttribute('action','https://app.leadconduit.com/flows/630826e984b3f41a172504c0/sources/61b26824e5499ecd6bbf2967/submit?redir_url=' + certificateUrl)
     }
 </script>
 
