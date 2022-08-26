@@ -25,6 +25,13 @@
 <noscript>
     <img src="http://api.trustedform.com/ns.gif" />
 </noscript>
+<script type="text/javascript">
+    // callback to log certificate url to console
+    function trustedFormCertUrlCallback(certificateUrl) {
+	document.getElementById('demo').setAttribute('data-redirect',certificateUrl)
+	console.log(certificateUrl);
+    }
+</script>
 
 <!-- Anti-flicker snippet (recommended)  -->
 <!--<style>.async-hide { opacity: 0 !important} </style>-->
@@ -291,6 +298,7 @@ display: none;
 		</div>
 
 		<form
+		        id="demo"
 			class="b-trustedform-demo-form__form js-contact-form"
 			action="https://app.leadconduit.com/flows/57926249e33d402d40753338/sources/5792610dcc94fb190bd59bc3/submit"
 			method="post"
