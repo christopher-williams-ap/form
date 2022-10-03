@@ -1,0 +1,44 @@
+<head>
+  <!-- Generate a TrustedForm Certificate -->
+  <script type="text/javascript">
+  (function() {
+      var field = 'xxTrustedFormCertUrl';
+      var provideReferrer = false;
+      var identifier = 'CHR12T0PH3R'
+      //var sandbox = true;
+      //var disableSnapshot = false;
+      var pingField = 'pingURL';
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript'; tf.async = true; 
+      tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+  )();
+  </script>
+  <noscript>
+      <img src="http://api.trustedform.com/ns.gif" />
+  </noscript>
+  <link rel="shortcut icon" type="image/jpg" href="https://christopher-williams-ap.github.io/form/favicon.ico"/>
+  <link rel='icon' href='https://christopher-williams-ap.github.io/form/favicon.ico' type='image/x-icon'>
+  <link rel="stylesheet" href="https://use.typekit.net/znf0juo.css">
+  <style>
+    body {background-color: #253842; font-family: "proxima nova", sans-serif; color: #6fb3c1; width: 500px; margin: 0 auto; padding: 20px; font-size: 18px;}
+    input {background-color: #6fb3c1!important; display: block; margin: 10px 0; min-width: 250px; padding: 6px 0; font-size: 14px;}
+    input[type="text"], input[type="password"], input[type="email"], textarea {color: #fff;}
+    input[type="checkbox"] {display: inline; min-width: 0px;}
+    #submit {background-color: #EFEFEF; -webkit-border-radius: 4px; border: none; color: #000000; font-size: 20px; display: block;}
+    a {color:#fff;}
+  </style>
+</head>
+<div id="demo-form" data-tf-sensitive="true">
+  <h1 style="color: #fff">TrustedForm Demo</h1>
+  <form method="post" id="production_form" name="production_form" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/633b5dfe899eb503f3275650/submit?redir_url=http%3A%2F%2Factiveprospect.com">
+    <input type="text"     id="first_name"    name="first_name" placeholder="First Name">
+    <input type="text"     id="last_name"     name="last_name"  placeholder="Last Name">
+    <input type="text"     id="email"         name="email"      placeholder="Email Address">
+    <input type="text"     id="phone"         name="phone"      placeholder="Phone Number">
+    <input type="checkbox" id="consent_given" name="consent"    value="consent_given">
+    <label for="consent_given">I confirm that all of my information is accurate and consent to be called as provided above.</label>
+    <button type="submit" id="submit" name="submit">Submit</button>
+  </form>
+</div>
