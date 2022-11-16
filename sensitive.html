@@ -4,14 +4,15 @@
   (function() {
       var field = 'xxTrustedFormCertUrl';
       var provideReferrer = false;
-      var identifier = 'CHR12T0PH3R'
+      var identifier = 'CHR12T0PH3R';
+      var invertFieldSensitivity = true;
       //var sandbox = true;
       //var disableSnapshot = false;
       var pingField = 'pingURL';
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField) + '&invert_field_sensitivity=' + escape(invertFieldSensitivity);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
@@ -30,7 +31,7 @@
     a {color:#fff;}
   </style>
 </head>
-<div id="demo-form" data-tf-sensitive="true">
+<div id="demo-form">
   <h1 style="color: #fff">TrustedForm Demo</h1>
   <form method="post" id="production_form" name="production_form" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/633b5dfe899eb503f3275650/submit?redir_url=http%3A%2F%2Factiveprospect.com">
     <input type="text"     id="first_name"    name="first_name" placeholder="First Name">
