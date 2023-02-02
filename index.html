@@ -11,7 +11,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.staging.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
@@ -20,7 +20,6 @@
   </noscript>
   <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
 </head>
-<div>Pointing at Staging</div>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
 
   <label for="firstName">First Name</label></br>
