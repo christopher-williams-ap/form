@@ -1,59 +1,4 @@
 <head>
-  <!-- Generate a TrustedForm Certificate -->
-  <script type="text/javascript">
-  (function() {
-      var field = 'xxTrustedFormCertUrl';
-      var provideReferrer = false;
-      var identifier = 'CHR12T0PH3R'
-      //var sandbox = true;
-      //var disableSnapshot = false;
-      var pingField = 'pingURL';
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript'; tf.async = true; 
-      tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-  )();
-  </script>
-  <noscript>
-      <img src="http://api.trustedform.com/ns.gif" />
-  </noscript>
-  <!-- Generate a LeadID -->
-  <script id="LeadiDscript" type="text/javascript">
-    (function() {
-      var s = document.createElement('script');
-      s.id = 'LeadiDscript_campaign';
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = '//create.lidstatic.com/campaign/d52d7190-e752-6fb9-65c0-98dfaa845d7f.js?snippet_version=2';
-      var LeadiDscript = document.getElementById('LeadiDscript');
-      LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-    })();
-  </script>
-  <noscript>
-    <img src='//create.leadid.com/noscript.gif?lac=4C32765C-0A7C-91F6-BCA6-8416D7E8B7EE&lck=d52d7190-e752-6fb9-65c0-98dfaa845d7f&snippet_version=2' />
-  </noscript>
-  <script>
-    var start = new Date();
-    var element = document.querySelector('#leadid_token');
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.type === "attributes") {
-          console.log("attributes changed " + (new Date() - start) + "ms");
-
-          // Example of accessing the element for which 
-          // event was triggered
-          mutation.target.textContent = "Attribute of the element changed";
-        }
-
-        console.log(mutation);
-      });
-    });
-
-    observer.observe(element, {
-      attributes: true //configure it to listen to attribute changes
-    });
-  </script>
 </head>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
 
@@ -74,4 +19,58 @@ Is this okay?</label></br>
   <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
     
 </form>
+<!-- Generate a TrustedForm Certificate -->
+<script type="text/javascript">
+(function() {
+    var field = 'xxTrustedFormCertUrl';
+    var provideReferrer = false;
+    var identifier = 'CHR12T0PH3R'
+    //var sandbox = true;
+    //var disableSnapshot = false;
+    var pingField = 'pingURL';
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript'; tf.async = true; 
+    tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+    '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+)();
+</script>
+<noscript>
+    <img src="http://api.trustedform.com/ns.gif" />
+</noscript>
+<!-- Generate a LeadID -->
+<script id="LeadiDscript" type="text/javascript">
+  (function() {
+    var s = document.createElement('script');
+    s.id = 'LeadiDscript_campaign';
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//create.lidstatic.com/campaign/d52d7190-e752-6fb9-65c0-98dfaa845d7f.js?snippet_version=2';
+    var LeadiDscript = document.getElementById('LeadiDscript');
+    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+  })();
+</script>
+<noscript>
+  <img src='//create.leadid.com/noscript.gif?lac=4C32765C-0A7C-91F6-BCA6-8416D7E8B7EE&lck=d52d7190-e752-6fb9-65c0-98dfaa845d7f&snippet_version=2' />
+</noscript>
+<script>
+  var start = new Date();
+  var element = document.querySelector('#leadid_token');
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === "attributes") {
+        console.log("attributes changed " + (new Date() - start) + "ms");
 
+        // Example of accessing the element for which 
+        // event was triggered
+        mutation.target.textContent = "Attribute of the element changed";
+      }
+
+      console.log(mutation);
+    });
+  });
+
+  observer.observe(element, {
+    attributes: true //configure it to listen to attribute changes
+  });
+</script>
