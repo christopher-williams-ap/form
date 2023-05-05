@@ -18,6 +18,7 @@
   <noscript>
       <img src="http://api.trustedform.com/ns.gif" />
   </noscript>
+  <!-- Generate a LeadID -->
   <script id="LeadiDscript" type="text/javascript">
     (function() {
       var s = document.createElement('script');
@@ -32,26 +33,26 @@
   <noscript>
     <img src='//create.leadid.com/noscript.gif?lac=4C32765C-0A7C-91F6-BCA6-8416D7E8B7EE&lck=d52d7190-e752-6fb9-65c0-98dfaa845d7f&snippet_version=2' />
   </noscript>
-  <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
-  <script src="https://unpkg.com/highlight.run"></script>
   <script>
-      H.init('ve6z6zdp', { // Get your project ID from https://app.highlight.io/setup
-          environment: 'production',
-          version: 'commit:abcdefg12345',
-          networkRecording: {
-              enabled: true,
-              recordHeadersAndBody: true,
-              urlBlocklist: [
-                  // insert urls you don't want to record here
-              ],
-          },
+    var start = new Date();
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === "attributes") {
+          console.log("attributes changed " + (new Date() - start) + "ms");
+
+          // Example of accessing the element for which 
+          // event was triggered
+          mutation.target.textContent = "Attribute of the element changed";
+        }
+
+        console.log(mutation);
       });
-      H.identify('christopher.williams@activeprospect.com', {
-        id: '1',
-        phone: '5125555555'
+    });
+
+    observer.observe(element, {
+      attributes: true //configure it to listen to attribute changes
     });
   </script>
-  
 </head>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
 
