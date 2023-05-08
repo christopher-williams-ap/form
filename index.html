@@ -73,4 +73,8 @@ Is this okay?</label></br>
   observer.observe(element, {
     attributes: true //configure it to listen to attribute changes
   });
+  document.addEventListener("DOMNodeInserted", function(e) {
+    console.log("node inserted " + (new Date() - start) + "ms");
+    console.log(e.target);
+}, false);
 </script>
