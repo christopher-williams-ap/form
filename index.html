@@ -1,6 +1,6 @@
 <head>
 </head>
-<form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
+<form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
 
   <label for="firstName">First Name</label></br>
   <input name="first_name" id="firstName" placeholder="First name" required autocomplete="given-name"></br></br>
@@ -55,26 +55,28 @@ Is this okay?</label></br>
 </noscript>
 <script>
   var start = new Date();
-  var element = document.querySelector('#leadid_token');
-  var observer = new MutationObserver(function(mutations) {
+  
+  var formElement = document.querySelector('#leadgen');
+  var formObserver = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      if (mutation.type === "attributes") {
-        console.log("attributes changed " + (new Date() - start) + "ms");
-
-        // Example of accessing the element for which 
-        // event was triggered
-        mutation.target.textContent = "Attribute of the element changed";
-      }
-
+      console.log("Changed after " + (new Date() - start) + "ms");
+      console.log(mutation);
+    });
+  });
+  formObserver.observe(formElement, {
+    childList: true //configure it to listen to attribute changes
+  });
+  
+  var leadIdElement = document.querySelector('#leadid_token');
+  var leadIdobserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      console.log("Changed after " + (new Date() - start) + "ms");
       console.log(mutation);
     });
   });
 
-  observer.observe(element, {
+  leadIdobserver.observe(leadIdElement, {
     attributes: true //configure it to listen to attribute changes
   });
-  document.addEventListener("DOMNodeInserted", function(e) {
-    console.log("node inserted " + (new Date() - start) + "ms");
-    console.log(e.target);
-}, false);
+  
 </script>
