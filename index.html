@@ -59,8 +59,9 @@ Is this okay?</label></br>
   var formElement = document.querySelector('#leadgen');
   var formObserver = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      console.log("Changed after " + (new Date() - start) + "ms");
-      console.log(mutation);
+      if (mutation.addedNodes && mutation.addedNodes[0].id == "xxTrustedFormCertUrl_0"){
+        console.log("TrustedForm Certificate took " + (new Date() - start) + "ms");
+      }
     });
   });
   formObserver.observe(formElement, {
@@ -70,8 +71,9 @@ Is this okay?</label></br>
   var leadIdElement = document.querySelector('#leadid_token');
   var leadIdobserver = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      console.log("Changed after " + (new Date() - start) + "ms");
-      console.log(mutation);
+      if(mutation.target.id == "leadid_token") {
+        console.log("Jornaya LeadID took " + (new Date() - start) + "ms");
+      }
     });
   });
 
