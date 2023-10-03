@@ -1,4 +1,29 @@
 <head>
+  <!-- Generate a TrustedForm Certificate -->
+  <script type="text/javascript">
+  (function() {
+      var field = 'xxTrustedFormCertUrl';
+      var provideReferrer = false;
+      var identifier = 'CHR12T0PH3R'
+      //var sandbox = true;
+      //var disableSnapshot = false;
+      var pingField = 'pingURL';
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript'; tf.async = true; 
+      tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
+  )();
+  </script>
+  <noscript>
+      <img src="http://api.trustedform.com/ns.gif" />
+  </noscript>
+  <script>
+    function test() {
+      console.log("test");
+      trustedFormNext();
+    }
+  </script>
 </head>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
   <select id="prefix">
@@ -24,26 +49,8 @@ Is this okay?</label></br>
   <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
     
 </form>
-<button type="button" onclick="trustedFormNext()">Create Another Certificate</button>
-<!-- Generate a TrustedForm Certificate -->
-<script type="text/javascript">
-(function() {
-    var field = 'xxTrustedFormCertUrl';
-    var provideReferrer = false;
-    var identifier = 'CHR12T0PH3R'
-    //var sandbox = true;
-    //var disableSnapshot = false;
-    var pingField = 'pingURL';
-    var tf = document.createElement('script');
-    tf.type = 'text/javascript'; tf.async = true; 
-    tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-    '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-)();
-</script>
-<noscript>
-    <img src="http://api.trustedform.com/ns.gif" />
-</noscript>
+<button type="button" onclick="test()">Create Another Certificate</button>
+
 <!-- Generate a LeadID -->
 <script id="LeadiDscript" type="text/javascript">
   (function() {
