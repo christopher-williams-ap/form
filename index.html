@@ -20,8 +20,8 @@
   </noscript>
   <script>
     function test() {
-      console.log("test");
-      trustedFormNext();
+      console.log("stop recording");
+      trustedFormStopRecording();
     }
   </script>
 </head>
@@ -49,7 +49,7 @@ Is this okay?</label></br>
   <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
     
 </form>
-<button type="button" onclick="test()">Create Another Certificate</button>
+<button type="button" onclick="test()">Stop Recording</button>
 
 <!-- Generate a LeadID -->
 <script id="LeadiDscript" type="text/javascript">
