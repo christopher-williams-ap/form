@@ -19,14 +19,17 @@
       <img src="http://api.trustedform.com/ns.gif" />
   </noscript>
   <script>
+    var counter = 1;
     function tfCallback(data) {
       console.log(data);
+      counter++;
     }
     function test() {
       console.log("stop recording");
       trustedFormStopRecording();
       console.log("next certificate");
-      trustedFormNext();
+      var options = {field: "Offer" + counter + "CertUrl"};
+      trustedFormNext(options, tfCallback);
     }
   </script>
 </head>
