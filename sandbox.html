@@ -1,23 +1,17 @@
 <head>
-  <!-- Generate a TrustedForm Certificate -->
+  <!-- TrustedForm -->
   <script type="text/javascript">
   (function() {
-      var field = 'xxTrustedFormCertUrl';
-      var provideReferrer = false;
-      var identifier = 'CHR12T0PH3R'
-      var sandbox = true;
-      //var disableSnapshot = false;
-      //var pingField = 'pingURL';
-      var tf = document.createElement('script');
-      tf.type = 'text/javascript'; tf.async = true; 
-      tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.staging.trustedform.com/bootstrap.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&sandbox=' + escape(sandbox);
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-  )();
+  var tf = document.createElement('script');
+  tf.type = 'text/javascript'; tf.async = true;
+  tf.src = ("https:" == document.location.protocol ? 'https' : 'http') + "://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&sandbox=true&l=" + new Date().getTime() + Math.random();
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
   </script>
   <noscript>
-      <img src="http://api.trustedform.com/ns.gif" />
+  <img src="https://api.trustedform.com/ns.gif" />
   </noscript>
+  <!-- End TrustedForm -->
   <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
 </head>
 <form method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit">
