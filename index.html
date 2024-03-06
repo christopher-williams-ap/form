@@ -11,7 +11,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.trustedform.com/trustedform.js?coreg=true&provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&coreg=true&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
@@ -42,6 +42,7 @@
     if (!document.getElementById("xxTrustedFormToken_0"))
     {
       mixpanel.track('Certificate Failed');
+      console.log('Cert Failed event sent');
     }
   </script>
   
