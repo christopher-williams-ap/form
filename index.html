@@ -44,6 +44,11 @@
       mixpanel.track('Certificate Failed');
       console.log('Cert Failed event sent');
     }
+    else
+    {
+      mixpanel.track('Certificate Generated');
+      console.log('Cert Generated event sent');
+    }
   </script>
   
 </head>
