@@ -11,7 +11,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript'; tf.async = true; 
       tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&coreg=true&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
+      '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random() + '&identifier=' + escape(identifier) + '&ping_field=' + escape(pingField);
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
   )();
   </script>
@@ -73,6 +73,7 @@ Shortly following this call, agents and carriers in your area will begin contact
 Before we provide your contact information to these agents or carriers, we need your consent (which is not required as a condition of purchasing property, goods or services - you may revoke your consent at any time).  Most agents will simply call you, but some may use text/SMS messages, a pre-recorded message or an automatic telephone dialing system such as the one used here to contact you today.
 Is this okay?</label></br>
   <button>Submit</button>
+  <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0">
   <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
     
 </form>
