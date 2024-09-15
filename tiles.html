@@ -47,7 +47,21 @@
       console.log('Cert Generated event sent');
     }
   </script>
-  
+  <style>
+    .tile label {
+      width:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100px;
+      border:2px solid #ddd;
+      text-align:center;
+    }
+    
+    .tile input:checked + label {
+      border:2px solid #0d0df1;
+    }
+  </style>
 </head>
 <form data-tf-element-role="offer" method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
   <label for="prefix">
@@ -66,16 +80,26 @@
   <label for="phone_1">Phone Number: <input name="phone_1" id="phone"></label></br></br>
   <label data-tf-element-role="consent-language" for="leadid_tcpa_disclosure" style="display:flex;align-items:start;"><input type="checkbox" name="consent_given" id="leadid_tcpa_disclosure"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted at the number above by the selected companies for marketing purposes that may use regulated technology.</div></label></br>
   <div>Please select the companies you would like to hear from:</div>
-  <label style="display:flex;align-items:center;">
-    <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-1">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Geico-Logo.svg/2560px-Geico-Logo.svg.png" width="100">
-    <span data-tf-element-role="consent-opted-advertiser-name-1" style="display:none">Geico</span>
-  </label>
-  <label style="display:flex;align-items:center;">
-    <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-2">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jaso_2Ir1yrSjKIND82-62GHLLvMr-Cr4g&s" width="100">
-    <span data-tf-element-role="consent-opted-advertiser-name-2" style="display:none">Progressive</span>
-  </label></br>
+  <div style="display:flex;gap:20px;">
+    <div class="tile">
+      <input type="checkbox" id="geico" style="display:none;">
+      <label for="geico">
+        <div class="icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Geico-Logo.svg/2560px-Geico-Logo.svg.png" width="80">
+        </div>
+        <div class="title" style="display:none;">Geico</div>
+      </label>
+    </div>
+    <div class="tile">
+      <input type="checkbox" id="progressive" style="display:none;">
+      <label for="progressive">
+        <div class="icon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jaso_2Ir1yrSjKIND82-62GHLLvMr-Cr4g&s" width="80">
+        </div>
+        <div class="title" style="display:none;">Progressive</div>
+      </label>
+    </div>
+  </div>
   <button data-tf-element-role="submit">Submit</button>
   </br></br>
   <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" disabled="disabled">
