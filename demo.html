@@ -6,39 +6,30 @@
 <meta name="facebook-domain-verification" content="a4egwwbzwk9xrdc35tkiidi0535oeg" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="https://activeprospect.com/xmlrpc.php">
-<!--<link rel="shortcut icon" href="--><!--">-->
 
-<!--<script src='https://www.google.com/recaptcha/api.js' async defer></script>-->
-
+<!-- TrustedForm -->
 <script type="text/javascript">
-    (function() {
-            var field = 'xxTrustedFormCertUrl';
-            var provideReferrer = false;
-            var tf = document.createElement('script');
-
-            tf.type = 'text/javascript'; tf.async = true;
-            tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
-                '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l='+new Date().getTime()+Math.random();
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s); }
-    )();
+  (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript';
+    tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&use_tagged_consent=true&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
 </script>
 <noscript>
-    <img src="http://api.trustedform.com/ns.gif" />
+  <img src='https://api.trustedform.com/ns.gif' />
 </noscript>
+<!-- End TrustedForm -->
+
 <script type="text/javascript">
     // callback to log certificate url to console
     function trustedFormCertUrlCallback(certificateUrl) {
 	document.getElementById('demo').setAttribute('action','https://app.leadconduit.com/flows/630826e984b3f41a172504c0/sources/61b26824e5499ecd6bbf2967/submit?redir_url=' + certificateUrl)
     }
 </script>
-
-<!-- Anti-flicker snippet (recommended)  -->
-<!--<style>.async-hide { opacity: 0 !important} </style>-->
-<!--<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;-->
-<!--h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};-->
-<!--(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;-->
-<!--})(window,document.documentElement,'async-hide','dataLayer',4000,-->
-<!--{'GTM-PPLHNZ':true});</script>-->
 
 <!--  Osana Script  -->
 <script src="https://cmp.osano.com/6oZkySU6ZD0N11Ee/6a5317c0-579e-43e8-897f-a15ee403decb/osano.js"></script>
@@ -137,374 +128,78 @@ display: none;
 		</head>
 
 <body class="page-template page-template-template-products-trustedform-demo page-template-template-products-trustedform-demo-php page page-id-53 page-parent page-child parent-pageid-30">
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PPLHNZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager -->
-
-<div id="wrapper" class="b-site-wrapper">
-	<a
-		class="skip-link screen-reader-text"
-		href="#content"
-	>
-		Skip to content	</a>
-
+	<div id="wrapper" class="b-site-wrapper">
+		<div id="content" class="b-page-content">
 	
-<div class="b-header__spacer">
-</div>
-
-
-<header class="b-header" id="js-site-header--sticky-nav" role="banner">
-
-	<div class="b-header__wrapper">
-		<div class="b-header__upper">
-			<a
-				href="https://activeprospect.com"
-				rel="home"
-				itemprop="url"
-				class="b-header__logo__link"
-			>
-				<img
-					class="b-header__logo__image"
-					src="https://activeprospect.com/wp-content/themes/activeprospect/assets/images/APLogo_Final2020_cropped.png"
-					alt="ActiveProspect"
-					width="267"
-				/>
-			</a>
-
-			<button
-				class="b-header__toggle"
-				id="js-menu-toggle"
-				aria-controls="menu"
-				aria-expanded="false"
-			>
-                <i class="fas fa-bars"></i>
-				<span class="screen-reader-text">Menu</span>
-			</button>
-
-			<nav
-				class="b-top-navigation"
-				role="navigation"
-			>
-				<ul id="js-top-menu" class="b-top-menu"><li class="b-top-menu__item b-top-menu__item--login"><a href="https://sso.activeprospect.com/login">Log In</a></li>
-</ul>			</nav><!-- .b-top-navigation -->
-		</div><!-- .b-header__upper -->
-
-		<div class="b-header__lower">
-            <div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="menu"><li id="menu-item-4381" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4381"><a href="#">Products</a>
-<ul class="sub-menu">
-	<li id="menu-item-4382" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4382"><a href="https://activeprospect.com/products/leadconduit/">LeadConduit</a></li>
-	<li id="menu-item-4383" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4383"><a href="https://activeprospect.com/products/trustedform/">TrustedForm</a></li>
-	<li id="menu-item-4703" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4703"><a target="_blank" rel="noopener" href="https://leadsbridge.com/">LeadsBridge</a></li>
-</ul>
-</li>
-<li id="menu-item-3854" class="b-header-main-menu__item menu-item menu-item-type-custom menu-item-object-custom menu-item-3854"><a href="/integrations/">Integrations</a></li>
-<li id="menu-item-3855" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3855"><a href="#">Solutions</a>
-<ul class="sub-menu">
-	<li id="menu-item-3856" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3856"><a href="https://activeprospect.com/compliance/">Compliance</a></li>
-	<li id="menu-item-3858" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3858"><a href="https://activeprospect.com/lead-acquisition/">Lead Acquisition</a></li>
-	<li id="menu-item-3857" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3857"><a href="https://activeprospect.com/lead-optimization/">Lead Optimization</a></li>
-	<li id="menu-item-3859" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3859"><a href="https://activeprospect.com/lead-distribution/">Lead Distribution</a></li>
-</ul>
-</li>
-<li id="menu-item-3860" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3860"><a href="#">Industry</a>
-<ul class="sub-menu">
-	<li id="menu-item-3861" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3861"><a href="https://activeprospect.com/insurance/">Insurance</a></li>
-	<li id="menu-item-3862" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3862"><a href="https://activeprospect.com/financial-services/">Financial Services</a></li>
-	<li id="menu-item-3865" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3865"><a href="https://activeprospect.com/home-services/">Home Services</a></li>
-	<li id="menu-item-3863" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3863"><a href="https://activeprospect.com/education/">Education</a></li>
-	<li id="menu-item-3864" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3864"><a href="https://activeprospect.com/direct-to-consumer/">CPG &#038; Media</a></li>
-</ul>
-</li>
-<li id="menu-item-4569" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4569"><a href="#">Content</a>
-<ul class="sub-menu">
-	<li id="menu-item-4260" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4260"><a href="https://activeprospect.com/resources/">Content Library</a></li>
-	<li id="menu-item-4584" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4584"><a href="https://activeprospect.com/webinars/">Webinars</a></li>
-	<li id="menu-item-4570" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4570"><a href="https://activeprospect.com/whitepaper/">Whitepapers</a></li>
-	<li id="menu-item-3874" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-3874"><a href="/blog/">Blog</a></li>
-	<li id="menu-item-4571" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4571"><a href="https://activeprospect.com/case-studies/">Case Studies</a></li>
-	<li id="menu-item-4106" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-4106"><a href="https://activeprospect.com/roi-calculator/">ROI Calculator</a></li>
-	<li id="menu-item-4572" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4572"><a href="https://activeprospect.com/videos/">Videos</a></li>
-</ul>
-</li>
-<li id="menu-item-3866" class="b-header-main-menu__item b-header-main-menu__item--has-children menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3866"><a href="#">Company</a>
-<ul class="sub-menu">
-	<li id="menu-item-3867" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3867"><a href="https://activeprospect.com/about-us/">About Us</a></li>
-	<li id="menu-item-3868" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3868"><a href="https://activeprospect.com/activeprospect-events/">Events</a></li>
-	<li id="menu-item-4654" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-4654"><a href="https://activeprospect.com/careers/">Careers</a></li>
-	<li id="menu-item-3869" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-post_type menu-item-object-page menu-item-3869"><a href="https://activeprospect.com/benefits/">Benefits</a></li>
-	<li id="menu-item-3872" class="b-header-main-menu__item b-header-main-menu__item--child menu-item menu-item-type-custom menu-item-object-custom menu-item-3872"><a href="https://community.activeprospect.com/">Support</a></li>
-</ul>
-</li>
-<li id="menu-item-3873" class="b-header-main-menu__item menu-item menu-item-type-custom menu-item-object-custom menu-item-3873"><a href="https://sso.activeprospect.com/trustedform/script">TrustedForm Web Script</a></li>
-</ul></div>			
-<div class="b-header-contact">
-	<div class="b-header-contact__cta--wrapper">
-        <li class="b-top-menu__item b-top-menu__item--hide-mobile">
-            <a href="tel:5123944546">1-512-394-4546</a>
-        </li>
-		<a
-			class="b-header-contact__button b-header-contact__button--expert"
-			href="https://activeprospect.com/demo-page/"
-		>
-                            SCHEDULE DEMO            		</a>
-	</div>
-
-</div>
-
-			<ul id="menu-header-mobile-extra-menu-items" class="b-header-mobile-extra-menu"><li class="b-header-mobile-extra-menu__item"><a href="https://activeprospect.com/privacy-policy/">Privacy Policy</a></li>
-<li class="b-header-mobile-extra-menu__item"><a href="https://activeprospect.com/terms-of-service/">Terms of Service</a></li>
-</ul>
-			<ul id="menu-social" class="b-header-social-menu"><li class="b-header-social-menu__item"><a target="_blank" href="https://www.facebook.com/activeprospect/"><span class="screen-reader-text">Facebook</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-facebook" aria-label="social-facebook"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-facebook"/></svg></a></li>
-<li class="b-header-social-menu__item"><a target="_blank" href="https://twitter.com/activeprospect"><span class="screen-reader-text">Twitter</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-twitter" aria-label="social-twitter"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-twitter"/></svg></a></li>
-<li class="b-header-social-menu__item"><a target="_blank" href="https://www.instagram.com/activeprospect/"><span class="screen-reader-text">Instagram</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-instagram" aria-label="social-instagram"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-instagram"/></svg></a></li>
-<li class="b-header-social-menu__item"><a target="_blank" href="https://www.linkedin.com/company/activeprospect"><span class="screen-reader-text">LinkedIn</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-linkedin" aria-label="social-linkedin"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-linkedin"/></svg></a></li>
-</ul>		</div><!-- .b-header__lower -->
-
-	</div><!-- .b-header__wrapper -->
-</header><!-- .b-header -->
-
-	<div id="content" class="b-page-content">
-
-<header class="b-page-header b-page-header--trustedform-demo">
-	<h1 class="b-page-header__title">
-		See How TrustedForm Works!
-	</h1>
-
-	<h2 class="b-page-header__subtitle">
-		Fill out the form below and we’ll email you the TrustedForm certificate associated with your sign up.
-	</h2>
-</header>
-
-<div id="primary" class="b-content-area b-content-area--narrow" role="main">
-
-	<div class="b-trustedform-demo-form">
-
-		<div class="b-trustedform-demo-form__image-container">
-			<img
-				src="https://live.staticflickr.com/7378/11288530833_7e265b0094_m.jpg"
-				alt="Random image to demo the TrustedForm video"
-				class="b-trustedform-demo-form__image"
-			/>
-			<span class="b-trustedform-demo-form__image-caption">
-				Random pic for your visit on: <br><strong>August 26, 2022</strong>
-			</span>
-		</div>
-
-		<form
-		        id="demo"
-			class="b-trustedform-demo-form__form js-contact-form"
-			action="https://app.leadconduit.com/flows/630826e984b3f41a172504c0/sources/61b26824e5499ecd6bbf2967/submit"
-			method="post"
-		>
-
-            <div class="b-contact-page__error"></div>
-
-            <label
-                    class="b-trustedform-demo-form__label"
-            >
-                <span class="screen-reader-text">Email</span>
-                <input
-                        type="email"
-                        name="email"
-                        class="b-trustedform-demo-form__field"
-                        placeholder="Email"
-                        required
-                />
-            </label>
-
-			<label
-				class="b-trustedform-demo-form__label"
-			>
-				<span class="screen-reader-text">First Name</span>
-				<input
-					type="text"
-					name="first_name"
-					class="b-trustedform-demo-form__field"
-					placeholder="First Name"
-					required
-				/>
-			</label>
-
-            <label
-                    class="b-trustedform-demo-form__label"
-            >
-                <span class="screen-reader-text">Last Name</span>
-                <input
-                        type="text"
-                        name="last_name"
-                        class="b-trustedform-demo-form__field"
-                        placeholder="Last Name"
-                        required
-                />
-            </label>
-
-            <label
-                    class="b-trustedform-demo-form__label"
-            >
-                <span class="screen-reader-text">Phone</span>
-                <input
-                        type="tel"
-                        name="phone_1"
-                        class="b-trustedform-demo-form__field"
-                        placeholder="Phone"
-                        required
-                />
-            </label>
-
-            <label
-                    class="b-trustedform-demo-form__label"
-            >
-                <span class="screen-reader-text">Company</span>
-                <input
-                        type="text"
-                        name="company_apros"
-                        class="b-trustedform-demo-form__field"
-                        placeholder="Company"
-                        required
-                />
-            </label>
-
-			<label for="leadid_tcpa_disclosure" class="b-trustedform-demo-form__label b-trustedform-demo-form__label--agree">
-				<input
-					type="checkbox"
-				        id="leadid_tcpa_disclosure"
-					class="b-trustedform-demo-form__checkbox"
-					required
-				/>
-				<span class="b-trustedform-demo-form__label-text">
-					I understand that the TrustedForm certificate is sent to the email address I provided above and I will receive product updates as they are released. I can unsubscribe from product updates at any time.
-				</span>
-			</label>
-
-			<input
-				type="submit"
-				class="b-trustedform-demo-form__submit js-submit"
-				value="Submit"
-			/>
-
-            <input type="hidden" name="utm_campaign" value />
-            <input type="hidden" name="utm_source" value />
-            <input type="hidden" name="utm_medium" value />
-
-		</form>
-
-		<a
-			href="https://activeprospect.com/privacy-policy/"
-			class="b-trustedform-demo-form__privacy-link"
-		>
-			Privacy
-		</a>
-	</div>
-
-</div><!-- .b-content-area -->
-
-
-	</div><!-- .b-page-content -->
-
-	<footer class="b-site-footer" role="contentinfo">
-		<div class="b-site-footer__container">
-
+			<header class="b-page-header b-page-header--trustedform-demo">
+				<h1 class="b-page-header__title">
+					See How TrustedForm Works!
+				</h1>
+			</header>
+		
+			<div id="primary" class="b-content-area b-content-area--narrow" role="main">
+				<div class="b-trustedform-demo-form">
+					<div class="b-trustedform-demo-form__image-container">
+						<img src="https://activeprospect.com/wp-content/uploads/2023/09/Benefits_1-2.png" class="b-trustedform-demo-form__image">
+						<span class="b-trustedform-demo-form__image-caption">
+						</span>
+					</div>
+					<form
+					    id="demo"
+						data-tf-element-role="offer"
+						class="b-trustedform-demo-form__form js-contact-form"
+						action="https://app.leadconduit.com/flows/630826e984b3f41a172504c0/sources/61b26824e5499ecd6bbf2967/submit"
+						method="post"
+					>
+			            <label
+			                    class="b-trustedform-demo-form__label"
+			            >
+							<span class="screen-reader-text">Name</span>
+			                <input
+			                        type="text"
+			                        name="last_name"
+			                        class="b-trustedform-demo-form__field"
+			                        placeholder="Name"
+			                        required
+			                />
+		            	</label>
+		
+			            <label
+			                    class="b-trustedform-demo-form__label"
+			            >
+			                <span class="screen-reader-text">Phone</span>
+			                <input
+			                        type="tel"
+			                        name="phone_1"
+			                        class="b-trustedform-demo-form__field"
+			                        placeholder="Phone"
+			                        required
+			                />
+			            </label>
+		
+						<label class="b-trustedform-demo-form__label b-trustedform-demo-form__label--agree">
+							<input
+								type="checkbox"
+								data-tf-element-role="consent-opt-in"
+								class="b-trustedform-demo-form__checkbox"
+								required
+							/>
+							<span class="b-trustedform-demo-form__label-text" data-tf-element-role="consent-language">
+								By clicking "Submit" I consent to be contacted at the number above by <strong data-tf-element-role="consent-advertiser-name">ActiveProspect</strong> for marketing purposes that may use regulated technologies.
+							</span>
+						</label>
 			
-<nav class="b-footer-navigation" role="navigation">
-
-	<div class="b-footer-navigation__column b-footer-navigation__column--main">
-		<div class="b-footer-navigation__item b-footer-navigation__item--social">
-			<a class="b-footer-navigation__item__logo" href="https://activeprospect.com">
-				<img src="https://activeprospect.com/wp-content/themes/activeprospect/assets/images/APIcon_Final_cropped.svg">
-			</a>
-		</div>
-
-                    <div id="block-2" class="contact-info widget_block"><p><em><strong>ActiveProspect HQ</strong></em><br>
-4009 Marathon Blvd<br>
-Austin, TX 78756</p></div><div id="block-3" class="contact-info widget_block"><p><strong>Mailing Address</strong><br>
-P.O Box 151136<br>
-Austin, TX 78715</p></div>        
-        <a
-            class="b-footer-navigation__item__talk"
-            href="https://activeprospect.com/contact-us/"
-        >
-            Contact Sales
-        </a>
-	</div><!-- .b-footer-navigation__column -->
-
-	<div class="b-footer-navigation__column b-footer-navigation__column--integrations">
-		<div class="b-footer-navigation__item">
-			<h4 class="b-footer-navigation__item__title">
-				Integrations			</h4>
-			<ul id="menu-footer-integrations" class="b-footer-menu b-footer-menu--integrations"><li class="b-footer-menu__item"><a href="https://activeprospect.com/integrations/">Integrations</a></li>
-</ul>		</div>
-	</div><!-- .b-footer-navigation__column -->
-
-	<div class="b-footer-navigation__column b-footer-navigation__column--solutions">
-		<div class="b-footer-navigation__item">
-			<h4 class="b-footer-navigation__item__title">
-				Solutions			</h4>
-			<ul id="menu-footer-solutions" class="b-footer-menu b-footer-menu--solutions"><li class="b-footer-menu__item"><a href="https://activeprospect.com/compliance/">Compliance</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-optimization/">Lead Optimization</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-acquisition/">Lead Acquisition</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/lead-distribution/">Lead Distribution</a></li>
-</ul>		</div>
-	</div><!-- .b-footer-navigation__column -->
-
-	<div class="b-footer-navigation__column b-footer-navigation__column--industry">
-		<div class="b-footer-navigation__item">
-			<h4 class="b-footer-navigation__item__title">
-				Industry			</h4>
-			<ul id="menu-footer-industry" class="b-footer-menu b-footer-menu--industry"><li class="b-footer-menu__item"><a href="https://activeprospect.com/insurance/">Insurance</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/financial-services/">Financial Services</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/home-services/">Home Services</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/education/">Education</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/direct-to-consumer/">Direct-to-Consumer</a></li>
-</ul>		</div>
-	</div><!-- .b-footer-navigation__column -->
-
-    <div class="b-footer-navigation__column b-footer-navigation__column--resources">
-        <div class="b-footer-navigation__item">
-            <h4 class="b-footer-navigation__item__title">
-                Resources            </h4>
-            <ul id="menu-footer-resources" class="b-footer-menu b-footer-menu--resources"><li class="b-footer-menu__item"><a href="https://community.activeprospect.com/">Knowledge Base</a></li>
-<li class="b-footer-menu__item"><a href="https://sso.activeprospect.com/trustedform/script">TrustedForm Web Script</a></li>
-<li class="b-footer-menu__item"><a href="https://developers.activeprospect.com/">API Documentation</a></li>
-<li class="b-footer-menu__item"><a href="/blog/">Blog</a></li>
-<li class="b-footer-menu__item"><a href="https://status.activeprospect.com">Status</a></li>
-</ul>        </div>
-    </div><!-- .b-footer-navigation__column -->
-
-	<div class="b-footer-navigation__column b-footer-navigation__column--company">
-		<div class="b-footer-navigation__item">
-			<h4 class="b-footer-navigation__item__title">
-				Company			</h4>
-			<ul id="menu-footer-company" class="b-footer-menu b-footer-menu--company"><li class="b-footer-menu__item"><a href="https://activeprospect.com/about-us/">About Us</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/activeprospect-events/">ActiveProspect Conferences and Events</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/careers/">Careers</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/benefits/">Benefits</a></li>
-</ul>		</div>
-	</div><!-- .b-footer-navigation__column -->
-
-    <div class="b-footer-navigation__column b-footer-navigation__column--legal">
-        <div class="b-footer-navigation__item">
-            <h4 class="b-footer-navigation__item__title">
-                Legal            </h4>
-            <ul id="menu-footer-legal" class="b-footer-menu b-footer-menu--legal"><li class="b-footer-menu__item"><a href="https://activeprospect.com/privacy-policy/">Privacy Policy</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/privacy-notice-california/">Privacy Notice for California Residents</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/terms-of-service/">Terms of Service</a></li>
-<li class="b-footer-menu__item"><a href="https://activeprospect.com/trustedform-eula/">TrustedForm Script EULA</a></li>
-<li class="b-footer-menu__item"><a href="#" onclick="Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')">Cookie Preferences</a></li>
-</ul>        </div>
-    </div><!-- .b-footer-navigation__column -->
-
-    <div class="b-footer-navigation__item__copyright">
-        <ul id="menu-social-1" class="b-footer-menu b-footer-menu--social"><li class="b-footer-menu__item"><a target="_blank" href="https://www.facebook.com/activeprospect/"><span class="screen-reader-text">Facebook</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-facebook" aria-label="social-facebook"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-facebook"/></svg></a></li>
-<li class="b-footer-menu__item"><a target="_blank" href="https://twitter.com/activeprospect"><span class="screen-reader-text">Twitter</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-twitter" aria-label="social-twitter"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-twitter"/></svg></a></li>
-<li class="b-footer-menu__item"><a target="_blank" href="https://www.instagram.com/activeprospect/"><span class="screen-reader-text">Instagram</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-instagram" aria-label="social-instagram"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-instagram"/></svg></a></li>
-<li class="b-footer-menu__item"><a target="_blank" href="https://www.linkedin.com/company/activeprospect"><span class="screen-reader-text">LinkedIn</span><svg role="presentation" class="icon b-footer-menu__item__icon" aria-label="social-linkedin" aria-label="social-linkedin"><use xlink:href="https://activeprospect.com/wp-content/themes/activeprospect/assets/svg/symbol-defs.svg?ver=4.2.8#social-linkedin"/></svg></a></li>
-</ul>        <p>&copy;2022 ActiveProspect</p>
-    </div>
-
-</nav><!-- .b-footer-navigation -->
-		</div><!-- .b-site-footer__container -->
-	</footer><!-- .b-site-footer -->
-</div><!-- .b-site-wrapper -->
+						<input
+							type="submit"
+							data-tf-element-role="submit"
+							class="b-trustedform-demo-form__submit js-submit"
+							value="Submit"
+						/>
+					</form>
+				</div>
+			</div><!-- .b-content-area -->
+		</div><!-- .b-page-content -->
+	</div><!-- .b-site-wrapper -->
 
 </body>
 </html>
