@@ -1,0 +1,152 @@
+<head>
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript';
+      tf.async = true;
+      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&use_tagged_consent=true&l=' +
+        new Date().getTime() + Math.random();
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src='https://api.trustedform.com/ns.gif' />
+  </noscript>
+  <!-- End TrustedForm -->
+  <script>
+    var counter = 1;
+    function tfCallback(data) {
+      console.log(data);
+      counter++;
+    }
+    function test() {
+      console.log("stop recording");
+      trustedFormStopRecording();
+      console.log("next certificate");
+      var options = {field: "Offer" + counter + "CertUrl"};
+      trustedFormNext(options, tfCallback);
+    }
+  </script>
+  <!-- Paste this right before your closing </head> tag -->
+  <script type="text/javascript">
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+  </script>
+  <script>
+    mixpanel.init('d17c3f47a55b458495822a52845007b1', {track_pageview: true});
+     
+    if (!document.getElementById("xxTrustedFormToken_0"))
+    {
+      mixpanel.track('Certificate Failed');
+      console.log('Cert Failed event sent');
+    }
+    else
+    {
+      mixpanel.track('Certificate Generated');
+      console.log('Cert Generated event sent');
+    }
+  </script>
+  
+</head>
+<div>Pretend there's a form up here asking data</div>
+<br />
+<div class="ltFormTermsConditions" data-tf-element-role="offer">
+    <div data-tf-element-role="consent-language">
+        <span>This is some hypothetical lead in text blah blah blah blah blah</span>
+        <input type="hidden" id="leadid_tcpa_disclosure"><label for="leadid_tcpa_disclosure">
+            <ul>
+                <li>I provide express written consent to receive calls and text messages at (404) 504-9006, including
+                    for marketing purposes, from the Network Partners selected below and any authorized third party
+                    calling or texting on their behalf, including calls and texts made through automated means such as
+                    autodialers, selection systems, and prerecorded or artificial voice recordings, even if my number is
+                    listed on any company-specific, state, or federal Do-Not-Call list. Message and data rates may
+                    apply. Consent is not required as a condition of any purchase. You may also use LendingTree’s <a
+                        href="https://www.lendingtree.com/home/mortgage/rates/" target="_blank">Loan Explorer</a>.
+                    <div id="slc-lender-list-placeholder">
+                        <div class="ltFormGroupContentSlcDisclosureTextboxes">
+                            <div class="slcDisclosure-item">
+                                <label tabindex="0" class="selected" data-tf-element-role="consent-opted-advertiser-name-1" >
+                                    <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-1" name="formData.consentedToPartnerIds[]" id="16610929" value="16610929">
+                                    <label class="boxLabel" for="16610929"></label>
+                                    <label for="16610929">
+                                        goodmortgage.com
+                                    </label>
+                                </label>
+                            </div>
+                            <div class="slcDisclosure-item">
+                                <label tabindex="0" class="selected" data-tf-element-role="consent-opted-advertiser-name-2">
+                                    <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-2" name="formData.consentedToPartnerIds[]" id="51039669" value="51039669">
+                                    <label class="boxLabel" for="51039669"></label>
+                                    <label for="51039669">
+                                        Canopy Training Lender, LLC
+                                    </label>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>I provide my express written consent to receive calls and text messages at the number entered above,
+                    including for marketing purposes, from LendingTree and any authorized third party calling or texting
+                    on LendingTree’s behalf, including calls and texts made through automated means such as autodialers,
+                    selection systems, and prerecorded or artificial voice recordings, even if my number is listed on
+                    any company-specific, state, or federal Do-Not-Call list. Such calls and texts may relate to my
+                    inquiry and other financial products and services that may be of interest to me. Message and data
+                    rates may apply. Message frequency varies. Text “STOP” to cancel. Consent is not required as a
+                    condition of any purchase. You may also use LendingTree’s <a
+                        href="https://www.lendingtree.com/home/mortgage/rates/" target="_blank">Loan Explorer</a>.</li>
+                <li>I authorize LendingTree to obtain my consumer report, credit profile, and other credit information
+                    associated with me from any consumer reporting agency at any time until I opt out (see opt-out
+                    instructions below).</li>
+            </ul>
+        </label>
+        <script>// this is where we load the AP script and interact with our state data</script>
+    </div>
+</div>
+
+<button data-tf-element-role="submit">CTA</button>
+
+<!-- Generate a LeadID -->
+<script id="LeadiDscript" type="text/javascript">
+  (function() {
+    var s = document.createElement('script');
+    s.id = 'LeadiDscript_campaign';
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//create.lidstatic.com/campaign/d52d7190-e752-6fb9-65c0-98dfaa845d7f.js?snippet_version=2';
+    var LeadiDscript = document.getElementById('LeadiDscript');
+    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+  })();
+</script>
+<noscript>
+  <img src='//create.leadid.com/noscript.gif?lac=4C32765C-0A7C-91F6-BCA6-8416D7E8B7EE&lck=e52d7190-e752-6fb9-65c0-98dfaa845d7f&snippet_version=2' />
+</noscript>
+<!-- <script>
+  var start = new Date();
+  
+  var formElement = document.querySelector('#leadgen');
+  var formObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes && mutation.addedNodes[0].id == "xxTrustedFormCertUrl_0"){
+        console.log("TrustedForm Certificate took " + (new Date() - start) + "ms");
+      }
+    });
+  });
+  formObserver.observe(formElement, {
+    childList: true //configure it to listen to attribute changes
+  });
+  
+  var leadIdElement = document.querySelector('#leadid_token');
+  var leadIdobserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if(mutation.target.id == "leadid_token") {
+        console.log("Jornaya LeadID took " + (new Date() - start) + "ms");
+      }
+    });
+  });
+
+  leadIdobserver.observe(leadIdElement, {
+    attributes: true //configure it to listen to attribute changes
+  });
+  
+</script> -->
