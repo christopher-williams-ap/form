@@ -16,61 +16,10 @@
   </noscript>
   <!-- End TrustedForm -->
 </head>
-<form data-tf-element-role="offer">
-  <div>Pretend there's a form up here asking data</div>
-  <br />
-  <div class="ltFormTermsConditions">
-      <div data-tf-element-role="consent-language">
-          <span>This is some hypothetical lead in text blah blah blah blah blah</span>
-          <input type="hidden" id="leadid_tcpa_disclosure"><label for="leadid_tcpa_disclosure">
-              <ul>
-                  <li>I provide express written consent to receive calls and text messages at (404) 504-9006, including
-                      for marketing purposes, from the Network Partners selected below and any authorized third party
-                      calling or texting on their behalf, including calls and texts made through automated means such as
-                      autodialers, selection systems, and prerecorded or artificial voice recordings, even if my number is
-                      listed on any company-specific, state, or federal Do-Not-Call list. Message and data rates may
-                      apply. Consent is not required as a condition of any purchase. You may also use LendingTree’s <a
-                          href="https://www.lendingtree.com/home/mortgage/rates/" target="_blank">Loan Explorer</a>.
-                      <div id="slc-lender-list-placeholder">
-                          <div class="ltFormGroupContentSlcDisclosureTextboxes">
-                              <div class="slcDisclosure-item">
-                                  <label tabindex="0" class="selected" data-tf-element-role="consent-opted-advertiser-name-1" >
-                                      <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-1" name="formData.consentedToPartnerIds[]" id="16610929" value="16610929">
-                                      <label class="boxLabel" for="16610929"></label>
-                                      <label for="16610929">
-                                          goodmortgage.com
-                                      </label>
-                                  </label>
-                              </div>
-                              <div class="slcDisclosure-item">
-                                  <label tabindex="0" class="selected" data-tf-element-role="consent-opted-advertiser-name-2">
-                                      <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-2" name="formData.consentedToPartnerIds[]" id="51039669" value="51039669">
-                                      <label class="boxLabel" for="51039669"></label>
-                                      <label for="51039669">
-                                          Canopy Training Lender, LLC
-                                      </label>
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-                  <li>I provide my express written consent to receive calls and text messages at the number entered above,
-                      including for marketing purposes, from LendingTree and any authorized third party calling or texting
-                      on LendingTree’s behalf, including calls and texts made through automated means such as autodialers,
-                      selection systems, and prerecorded or artificial voice recordings, even if my number is listed on
-                      any company-specific, state, or federal Do-Not-Call list. Such calls and texts may relate to my
-                      inquiry and other financial products and services that may be of interest to me. Message and data
-                      rates may apply. Message frequency varies. Text “STOP” to cancel. Consent is not required as a
-                      condition of any purchase. You may also use LendingTree’s <a
-                          href="https://www.lendingtree.com/home/mortgage/rates/" target="_blank">Loan Explorer</a>.</li>
-                  <li>I authorize LendingTree to obtain my consumer report, credit profile, and other credit information
-                      associated with me from any consumer reporting agency at any time until I opt out (see opt-out
-                      instructions below).</li>
-              </ul>
-          </label>
-          <script>// this is where we load the AP script and interact with our state data</script>
-      </div>
+<div data-tf-element-role="offer">
+  <label data-tf-element-role="consent-language">This is offer1's consent language for <span data-tf-element-role="consent-advertiser-name">Advertiser1</span></label>
+  <div>
+    <input type="radio" name="offer1-submit" data-tf-element-role="submit"/><label>Yes</label>
+    <input type="radio" name="offer1-submit"/><label>No</label>
   </div>
-  
-  <button data-tf-element-role="submit">CTA</button>
-</form>
+</div>
