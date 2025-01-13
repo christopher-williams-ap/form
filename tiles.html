@@ -15,38 +15,6 @@
     <img src='https://api.trustedform.com/ns.gif' />
   </noscript>
   <!-- End TrustedForm -->
-  <script>
-    var counter = 1;
-    function tfCallback(data) {
-      console.log(data);
-      counter++;
-    }
-    function test() {
-      console.log("stop recording");
-      trustedFormStopRecording();
-      console.log("next certificate");
-      var options = {field: "Offer" + counter + "CertUrl"};
-      trustedFormNext(options, tfCallback);
-    }
-  </script>
-  <!-- Paste this right before your closing </head> tag -->
-  <script type="text/javascript">
-    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
-  </script>
-  <script>
-    mixpanel.init('d17c3f47a55b458495822a52845007b1', {track_pageview: true});
-     
-    if (!document.getElementById("xxTrustedFormToken_0"))
-    {
-      mixpanel.track('Certificate Failed');
-      console.log('Cert Failed event sent');
-    }
-    else
-    {
-      mixpanel.track('Certificate Generated');
-      console.log('Cert Generated event sent');
-    }
-  </script>
   <style>
     .tile label {
       width:100px;
@@ -78,18 +46,18 @@
   <label for="lastName">Last Name: <input name="last_name" id="lastName"></label></br>
   <label for="frmEmailA">Email Address: <input type="email" name="email" id="frmEmailA"></label></br>
   <label for="phone_1">Phone Number: <input name="phone_1" id="phone"></label></br></br>
-  <label data-tf-element-role="consent-language" for="leadid_tcpa_disclosure" style="display:flex;align-items:start;"><input type="checkbox" name="consent_given" id="leadid_tcpa_disclosure"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted at the number above by the selected companies for marketing purposes that may use regulated technology.</div></label></br>
+  <label data-tf-element-role="consent-language" style="display:flex;align-items:start;"><input type="checkbox" name="consent_given" id="leadid_tcpa_disclosure"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted at the number above by the selected companies for marketing purposes that may use regulated technology.</div></label></br>
   <div>Please select the companies you would like to hear from:</div>
   <div style="display:flex;gap:20px;">
     <div class="tile">
-      <div style="display:none"><input data-tf-element-role="consent-opted-advertiser-input-1" type="checkbox" id="geico"></div>
+      <input data-tf-element-role="consent-opted-advertiser-input-1" type="checkbox" id="geico">
       <label for="geico">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Geico-Logo.svg/2560px-Geico-Logo.svg.png" width="80">
         <div data-tf-element-role="consent-opted-advertiser-name-1" style="display:none;">Geico</div>
       </label>
     </div>
     <div class="tile">
-      <div style="display:none"><input data-tf-element-role="consent-opted-advertiser-input-2" type="checkbox" id="progressive"></div>
+      <input data-tf-element-role="consent-opted-advertiser-input-2" type="checkbox" id="progressive">
       <label for="progressive">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jaso_2Ir1yrSjKIND82-62GHLLvMr-Cr4g&s" width="80">
         <div data-tf-element-role="consent-opted-advertiser-name-2" style="display:none;">Progressive</div>
@@ -99,51 +67,4 @@
   <button data-tf-element-role="submit">Submit</button>
   </br></br>
   <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" disabled="disabled">
-  <input type=hidden id="leadid_token" name="universal_leadid" value=""/>
 </form>
-<button type="button" onclick="test()">Stop Recording</button>
-
-<!-- Generate a LeadID -->
-<script id="LeadiDscript" type="text/javascript">
-  (function() {
-    var s = document.createElement('script');
-    s.id = 'LeadiDscript_campaign';
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = '//create.lidstatic.com/campaign/d52d7190-e752-6fb9-65c0-98dfaa845d7f.js?snippet_version=2';
-    var LeadiDscript = document.getElementById('LeadiDscript');
-    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-  })();
-</script>
-<noscript>
-  <img src='//create.leadid.com/noscript.gif?lac=4C32765C-0A7C-91F6-BCA6-8416D7E8B7EE&lck=e52d7190-e752-6fb9-65c0-98dfaa845d7f&snippet_version=2' />
-</noscript>
-<!-- <script>
-  var start = new Date();
-  
-  var formElement = document.querySelector('#leadgen');
-  var formObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.addedNodes && mutation.addedNodes[0].id == "xxTrustedFormCertUrl_0"){
-        console.log("TrustedForm Certificate took " + (new Date() - start) + "ms");
-      }
-    });
-  });
-  formObserver.observe(formElement, {
-    childList: true //configure it to listen to attribute changes
-  });
-  
-  var leadIdElement = document.querySelector('#leadid_token');
-  var leadIdobserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if(mutation.target.id == "leadid_token") {
-        console.log("Jornaya LeadID took " + (new Date() - start) + "ms");
-      }
-    });
-  });
-
-  leadIdobserver.observe(leadIdElement, {
-    attributes: true //configure it to listen to attribute changes
-  });
-  
-</script> -->
