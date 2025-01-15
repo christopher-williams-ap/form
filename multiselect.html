@@ -1,0 +1,63 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript';
+      tf.async = true;
+      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&use_tagged_consent=true&l=' +
+        new Date().getTime() + Math.random();
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src='https://api.trustedform.com/ns.gif' />
+  </noscript>
+  <!-- End TrustedForm -->
+</head>
+<form data-tf-element-role="offer" method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
+  <label for="prefix">
+    <span>Prefix:</span>
+    <select id="prefix">
+      <option value="Mr." name="mr">Mr.</option>
+      <option value="Mrs." name="ms">Mrs.</option>
+      <option value="Ms.">Ms.</option>
+      <option value="Dr.">Dr.</option>
+    </select>
+  </label>
+  </br>
+  <label for="firstName">First Name: <input name="first_name" id="firstName"></label></br>
+  <label for="lastName">Last Name: <input name="last_name" id="lastName"></label></br>
+  <label for="frmEmailA">Email Address: <input type="email" name="email" id="frmEmailA"></label></br>
+  <label for="phone_1">Phone Number: <input name="phone_1" id="phone"></label></br></br>
+  <label data-tf-element-role="consent-language" style="display:flex;align-items:start;"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted by the selected companies for marketing purposes that may use regulated technology.</div></label></br>
+  <div>Please select the companies you would like to hear from:</div>
+  <select select multiple="true" id="vendor-selection" size="4">
+    <option id="vendor-1" data-tf-element-role="consent-opted-advertiser-name-1">Advertiser 1</option>
+    <option id="vendor-2" data-tf-element-role="consent-opted-advertiser-name-2">Advertiser 2</option>
+    <option id="vendor-3" data-tf-element-role="consent-opted-advertiser-name-3">Advertiser 3</option>
+  </select>
+  
+  <div style="display: none;">
+    <input id="vendor-1-chk" type="checkbox" data-tf-element-role="consent-opted-advertiser-input-1">
+    <input id="vendor-2-chk" type="checkbox" data-tf-element-role="consent-opted-advertiser-input-2">
+    <input id="vendor-3-chk" type="checkbox" data-tf-element-role="consent-opted-advertiser-input-3">
+  </div>
+  
+  </br>
+  <button data-tf-element-role="submit">Submit</button>
+  </br></br>
+  <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" disabled="disabled" style="width:500px;">
+</form>
+
+<script type="text/javascript">
+  const selectElement = document.getElementById("vendor-selection");
+  selectElement.addEventListener("change", (event) => {
+    for (x = 0; x < selectElement.length; x++) {
+      const item = document.getElementById(selectElement.options.item(x).id + "-chk");
+      item.checked = selectElement.options.item(x).selected;
+    }
+  });
+</script>
