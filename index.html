@@ -49,8 +49,27 @@
       console.log('Cert Generated event sent');
     }
   </script>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Call</title>
+  <style>
+      .call-button {
+          display: inline-block;
+          background-color: #28a745;
+          color: white;
+          padding: 10px 20px;
+          font-size: 18px;
+          text-align: center;
+          border-radius: 5px;
+          text-decoration: none;
+          font-family: Arial, sans-serif;
+      }
+      .call-button:hover {
+          background-color: #218838;
+      }
+  </style>
 </head>
+<a href="tel:+1234567890" class="call-button">Call Us Now</a>
 <form data-tf-element-role="offer" method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
   <label for="prefix">
     <span>Prefix:</span>
