@@ -1,0 +1,47 @@
+<head>
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript';
+      tf.async = true;
+      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&use_tagged_consent=true&l=' +
+        new Date().getTime() + Math.random();
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src='https://api.trustedform.com/ns.gif' />
+  </noscript>
+  <!-- End TrustedForm -->
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          margin-top: 20%;
+      }
+      .button-container {
+          margin-top: 20px;
+      }
+      button {
+          font-size: 18px;
+          padding: 10px 20px;
+          margin: 10px;
+          cursor: pointer;
+      }
+  </style>
+  <script>
+      function proceed() {
+          alert("Your data has been sold!");
+      }
+      function cancel() {
+          alert("You chose not to proceed.");
+      }
+  </script>
+</head>
+<h2>Hello Steven. If you click "Yes" I will send all the info I have cached about you to data brokers. Is that ok?</h2>
+<div class="button-container" data-tf-element-role="offer">
+    <button onclick="proceed()" data-tf-element-role="submit">Yes</button>
+    <button onclick="cancel()">No</button>
+</div>
