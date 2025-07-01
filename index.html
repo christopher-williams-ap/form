@@ -70,7 +70,7 @@
   </style>
 </head>
 </br>
-<a href="tel:+555555555" class="call-button">Call Us Now - 555.555.5555</a>
+<a href="tel:+555555555" class="call-button" name="click to call button">Call Us Now - 555.555.5555</a>
 </br></br>
 <form data-tf-element-role="offer" method="post" action="https://app.leadconduit.com/flows/608ad0b0daeb85ec2060361f/sources/56ddf55401a7c994452e8ca5/submit" id="leadgen">
   <label for="prefix">
@@ -87,7 +87,10 @@
   <label for="lastName">Last Name: <input name="last_name" id="lastName"></label></br>
   <label for="frmEmailA">Email Address: <input type="email" name="email" id="frmEmailA"></label></br>
   <label for="phone_1">Phone Number: <input name="phone_1" id="phone"></label></br></br>
-  <label data-tf-element-role="consent-language" for="leadid_tcpa_disclosure" style="display:flex;align-items:start;"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted by the selected companies for marketing purposes that may use regulated technology.</div></label></br>
+  <label for="phone_1">Favorite Soup:</label></br></br>
+  <input name="fav_soup" id="chicken_noodle" type="radio"><label for="chicken_noodle">Chicken Noodel</label></br>
+  <input name="fav_soup" id="tomato" type="radio"><label for="tomato">Tomato</label></br>
+  <label data-tf-element-role="consent-language" for="leadid_tcpa_disclosure" style="display:flex;align-items:start;"><div style="max-width:350px;">By clicking "Submit" I consent to be contacted by the selected companies for marketing purposes that may use regulated technology and agree to this <a name="privacy_policy" href="https://christopher-williams-ap.github.io/form/privacy">privacy policy</a>.</div></label></br>
   <div>Please select the companies you would like to hear from:</div>
   <label style="display:flex;align-items:center;">
     <input type="checkbox" data-tf-element-role="consent-opted-advertiser-input-1">
@@ -105,6 +108,8 @@
   <input type=hidden id="leadid_token" name="universal_leadid" value=""/>
 </form>
 <button type="button" onclick="test()">Stop Recording</button>
+<button type="button">Do Nothing</button>
+<button type="button" name="do_nothing_button">Do Nothing (Named)</button>
 
 <!-- Generate a LeadID -->
 <script id="LeadiDscript" type="text/javascript">
