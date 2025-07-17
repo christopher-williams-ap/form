@@ -153,5 +153,18 @@
   leadIdobserver.observe(leadIdElement, {
     attributes: true //configure it to listen to attribute changes
   });
+
+  var certElement = document.querySelector('#xxTrustedFormCertUrl_0');
+  var certObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if(mutation.target.id == "xxTrustedFormCertUrl_0") {
+        console.log("TF took " + (new Date() - start) + "ms");
+      }
+    });
+  });
+
+  certObserver.observe(certElement, {
+    attributes: true //configure it to listen to attribute changes
+  });
   
 </script>
