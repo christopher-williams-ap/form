@@ -104,7 +104,7 @@
   </label></br>
   <button data-tf-element-role="submit">Submit</button>
   </br></br>
-  <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" disabled="disabled" style="width:500px;">
+<!--   <input type="text" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" disabled="disabled" style="width:500px;"> -->
   <input type=hidden id="leadid_token" name="universal_leadid" value=""/>
 </form>
 <button type="button" onclick="test()">Stop Recording</button>
@@ -151,19 +151,6 @@
   });
 
   leadIdobserver.observe(leadIdElement, {
-    attributes: true //configure it to listen to attribute changes
-  });
-
-  var certElement = document.querySelector('#xxTrustedFormCertUrl_0');
-  var certObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if(mutation.target.id == "xxTrustedFormCertUrl_0") {
-        console.log("TF took " + (new Date() - start) + "ms");
-      }
-    });
-  });
-
-  certObserver.observe(certElement, {
     attributes: true //configure it to listen to attribute changes
   });
   
