@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Health Benefits Consent</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 500px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .disclosure {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .yes-button {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .no-button {
+      background-color: #ccc;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Do you want health benefits?</h1>
+    <div class="disclosure">
+      By clicking “Yes”, I provide my signature expressly consenting to contact from select Marketing Partners at the number 512.555.5555 regarding products or services via live, automated or prerecorded telephone call, text or email, even if that number is on any local, state or national "Do Not Call" list. I expressly consent to these telephone calls being monitored or recorded. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand I can revoke this consent at any time through any reasonable means. I agree to the Privacy Policy and Terms of Use including mandatory arbitration.
+    </div>
+    <button class="button yes-button">Yes</button>
+    <button class="button no-button">No</button>
+  </div>
+
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+      var tf = document.createElement('script');
+      tf.type = 'text/javascript';
+      tf.async = true;
+      tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+        '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+        new Date().getTime() + Math.random();
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src='https://api.trustedform.com/ns.gif' />
+  </noscript>
+  <!-- End TrustedForm -->
+
+</body>
+</html>
