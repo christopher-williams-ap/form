@@ -1,0 +1,351 @@
+<head>
+
+</head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Example Insurance Lead Form</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.06);
+      --text: #e8eefc;
+      --muted: rgba(232,238,252,0.75);
+      --border: rgba(255,255,255,0.14);
+      --focus: rgba(120,180,255,0.65);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(900px 600px at 20% -10%, rgba(70,120,255,0.35), transparent 60%),
+                  radial-gradient(800px 500px at 90% 20%, rgba(0,210,180,0.28), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    header {
+      padding: 28px 20px 0;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      letter-spacing: 0.2px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 64ch;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 18px auto 80px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .form-grid .full { grid-column: 1 / -1; }
+    @media (max-width: 560px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .form-grid .full { grid-column: auto; }
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(10,16,28,0.55);
+      color: var(--text);
+      outline: none;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(232,238,252,0.45); }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--focus);
+      box-shadow: 0 0 0 4px rgba(120,180,255,0.18);
+    }
+
+    textarea { min-height: 96px; resize: vertical; }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      appearance: none;
+      border: 0;
+      background: linear-gradient(135deg, rgba(90,170,255,0.95), rgba(0,220,185,0.88));
+      color: #03101c;
+      font-weight: 700;
+      padding: 12px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    button:active { transform: translateY(1px); }
+
+    .fineprint {
+      font-size: 12px;
+      color: rgba(232,238,252,0.65);
+      max-width: 70ch;
+    }
+
+    /* Right-side info card */
+    .info ul { margin: 10px 0 0; padding-left: 18px; color: rgba(232,238,252,0.78); }
+    .info li { margin: 6px 0; }
+
+    /* Floating TrustedForm iframe (top-right, always visible) */
+    .tf-float {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 9999;
+
+      width: 320px;
+      height: 170px;
+
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(10,16,28,0.72);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.45);
+    }
+
+    .tf-float header {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: rgba(232,238,252,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .tf-float .tf-actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .tf-float .icon-btn {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      color: rgba(232,238,252,0.85);
+      border-radius: 10px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .tf-float iframe {
+      width: 100%;
+      height: calc(100% - 33px);
+      border: 0;
+      display: block;
+      background: white;
+    }
+
+    /* Collapsed state: keeps it visible but tiny */
+    .tf-float.collapsed {
+      height: 42px;
+      width: 220px;
+    }
+    .tf-float.collapsed iframe { display: none; }
+
+    /* Make sure it blocks less on very small screens */
+    @media (max-width: 420px) {
+      .tf-float { width: 260px; height: 160px; }
+      .tf-float.collapsed { width: 200px; }
+    }
+  </style>
+
+  <!-- TrustedForm -->
+  <script type="text/javascript">
+    (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript'; tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') + "://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&sandbox=true&l=" + new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+    })();
+  </script>
+  <noscript>
+    <img src="https://api.trustedform.com/ns.gif" />
+  </noscript>
+  <!-- End TrustedForm -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Floating TrustedForm iframe -->
+  <section class="tf-float" id="tfFloat" aria-label="TrustedForm Certificate">
+    <header>
+      <span>TrustedForm Certificate</span>
+      <div class="tf-actions">
+        <button class="icon-btn" type="button" id="tfToggle" aria-expanded="true">Minimize</button>
+      </div>
+    </header>
+    <iframe
+      title="TrustedForm Certificate"
+      src="https://cert.trustedform.com/a799f39f59cd2e320ff139e49e78e762d956a308"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+  <header>
+    <h1>Get a Free Insurance Quote</h1>
+    <p>Example lead generation form (generic insurance). Fill it out to simulate a quote request.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 class="section-title">Your Information</h2>
+
+      <form id="leadForm">
+        <div class="form-grid">
+          <div>
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required />
+          </div>
+
+          <div>
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" placeholder="Doe" autocomplete="family-name" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com" autocomplete="email" required />
+          </div>
+
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel" required />
+          </div>
+
+          <div>
+            <label for="zip">ZIP code</label>
+            <input id="zip" name="zip" inputmode="numeric" placeholder="78701" autocomplete="postal-code" required />
+          </div>
+
+          <div>
+            <label for="insuranceType">Insurance type</label>
+            <select id="insuranceType" name="insuranceType" required>
+              <option value="" selected disabled>Select one</option>
+              <option>Auto</option>
+              <option>Home</option>
+              <option>Renters</option>
+              <option>Life</option>
+              <option>Health</option>
+              <option>Pet</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes" placeholder="Example: I want coverage starting next month…"></textarea>
+          </div>
+
+          <div class="full">
+            <label>
+              <input type="checkbox" id="consent" required />
+              I agree to be contacted about insurance quotes (example consent checkbox).
+            </label>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit">Request Quote</button>
+          <div class="fineprint">
+            This is a demo form. In a real flow you’d include TCPA language, privacy policy links,
+            and submit to your backend endpoint.
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <aside class="card info">
+      <h2 class="section-title">What happens next?</h2>
+      <p style="color: var(--muted); margin: 0;">
+        This right-side panel is just filler content so you can scroll and confirm the TrustedForm iframe
+        stays visible without blocking too much of the form.
+      </p>
+      <ul>
+        <li>We “review” your request</li>
+        <li>A licensed agent “contacts” you</li>
+        <li>You “compare” quote options</li>
+        <li>You “choose” a policy</li>
+      </ul>
+
+      <div style="height: 950px;"></div>
+      <p style="color: rgba(232,238,252,0.65); margin: 0;">
+        Scroll test: the certificate widget should remain pinned in the top-right corner.
+      </p>
+    </aside>
+  </main>
+
+  <script>
+    // Minimize/maximize the floating iframe so it blocks less content when desired
+    const tfFloat = document.getElementById('tfFloat');
+    const tfToggle = document.getElementById('tfToggle');
+
+    tfToggle.addEventListener('click', () => {
+      const collapsed = tfFloat.classList.toggle('collapsed');
+      tfToggle.textContent = collapsed ? 'Expand' : 'Minimize';
+      tfToggle.setAttribute('aria-expanded', String(!collapsed));
+    });
+
+    // Demo submit handler
+    document.getElementById('leadForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Demo: form submitted (no network request).');
+    });
+  </script>
+</body>
