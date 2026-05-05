@@ -10,7 +10,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript';
       tf.async = false;
-      tf.onerror = "adBlockDetected = true;";
+      tf.addEventListener('error', function () { adBlockDetected = true; });
       tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
         '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&use_tagged_consent=true&l=' +
         new Date().getTime() + Math.random();
