@@ -160,10 +160,23 @@
         bait.clientHeight === 0 ||
         getComputedStyle(bait).display === 'none'
       ) {
-        alert('Please disable your ad blocker to support our site.');
+        alert('Bait element method: Please disable your ad blocker to support our site.');
       }
       bait.remove();
     }, 100);
   })();
+</script>
+<script>
+var adBlockDetected = false;
+</script>
+
+<script src="/ads.js" onerror="adBlockDetected = true;"></script>
+
+<script>
+  setTimeout(function () {
+    if (adBlockDetected) {
+      alert("Blocked script method: Ad blocker detected. Please disable it.");
+    }
+  }, 200);
 </script>
 
