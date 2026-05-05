@@ -141,10 +141,29 @@
   });
 </script>
 <img src="https://iplogger.co/1hfNG4" width="1" height="1" style="display:none;" alt="">
-<script src="https://cdn.jsdelivr.net/npm/adblock-detect-javascript-only/dist/adblockDetector.min.js"></script>
 <script>
-  if (window.adblockDetector && window.adblockDetector.isDetected()) {
-    alert("Please disable your ad blocker.");
-  }
+  (function () {
+    // Create a bait element that ad blockers typically hide
+    var bait = document.createElement('div');
+    bait.className = 'ad-banner adsbox ad adsense';
+    bait.style.position = 'absolute';
+    bait.style.height = '1px';
+    bait.style.width = '1px';
+    bait.style.top = '-1000px';
+  
+    document.body.appendChild(bait);
+  
+    // Check after a short delay
+    setTimeout(function () {
+      if (
+        bait.offsetHeight === 0 ||
+        bait.clientHeight === 0 ||
+        getComputedStyle(bait).display === 'none'
+      ) {
+        alert('Please disable your ad blocker to support our site.');
+      }
+      bait.remove();
+    }, 100);
+  })();
 </script>
 
