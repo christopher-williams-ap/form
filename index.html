@@ -7,7 +7,7 @@
       var tf = document.createElement('script');
       tf.type = 'text/javascript';
       tf.async = false;
-      tf.addEventListener('error', function () { 
+      tf.addEventListener('error', function (e) { 
         alert("We’re having trouble loading this page. If you’re using an ad blocker, it may be preventing content from loading that is necessary to enable us to serve you. Please disable your ad blocker and try again.");
         console.log(e);
       });
